@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>tag3-표만들기실습</title>
+  </head>
+  <body>
+    <h3>Table-1</h3>
+      <table border="1px" width="400px" height="250px">
+        <tr><td colspan="2">A</td></tr>
+        <tr><td>B</td><td>C</td></tr>
+      </table>
+<hr>
+    <h3>Table-2</h3>
+      <table border="1px" width="400px" height="250px">
+        <tr><td rowspan="3">A</td><td>B</td><td rowspan="3">E</td></tr>
+        <tr><td>C</td></tr>
+        <tr><td>D</td></tr>
+        <tr><td colspan="3">F</td></tr>
+      </table>
+<hr>
+    <h3>Table-3</h3>
+      <table border="1px" width="400px" height="250px">
+        <tr><td>A</td><td>C</td><td rowspan="2">E</td><td>F</td></tr>
+        <tr><td>B</td><td>D</td><td>G</td></tr>
+        <tr><td colspan="3">H</td><td>I</td></tr>
+      </table>
+<hr>
+    <h3>Table-4</h3>
+      <table border="1px" width="400px" height="250px">
+        <tr><td>A</td><td>B</td><td>C</td></tr>
+        <tr><td colspan="3">
+            <table border="1px" align="center" width="200px">
+              <tr><td>D-1</td><td>D-2</td></tr>
+              <tr><td>D-3</td><td>D-4</td></tr>
+            </table>
+        </td>
+        </tr>
+  </body>
+</html>
