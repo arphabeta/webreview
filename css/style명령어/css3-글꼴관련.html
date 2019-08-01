@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css3-글꼴관련</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Saira+Stencil+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
+    <style>
+      .tt1{font-family:맑은고딕,돋움,굴림;}
+      .tt2{font-family:"바탕체","굴림체";}
+      .tt3{font-family:궁서체;}
+
+      .tt4{font-style:italic;} /*웹에서 쓸땐 italic 기울임체를 사용*/
+      .tt5{font-style:oblique;}
+
+      .tt6{font-weight:bold;}
+      .tt7{font-weight:700;}
+      /*굵기정도:100,200,300....900->글꼴에 따라 다를 수 있음*/
+
+      .tt8{font-size:xx-small;}
+      .tt9{font-size:x-small;}
+      .tt10{font-size:small;}
+      .tt11{font-size:medium;}
+      .tt12{font-size:large;}
+      .tt13{font-size:x-large;}
+      .tt14{font-size:xx-large;}
+      .tt15{font-size:smaller;}
+      .tt16{font-size:12pt;}
+      .tt17{font-size:5px;}
+      .tt18{font-size:180%;}
+
+      .webf1{
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size:46px;
+        color:#ff0000;
+        font-weight:bold;
+      }
+      .webf11{
+        font-family: 'Nanum Myeongjo', serif;
+        font-size:36px;
+        color:#ff935c;
+      }
+      .webf2{
+        font-family: 'Black Han Sans', sans-serif;
+        color:#00818a;
+        background-color:#f7be16;
+        font-size:xx-large;
+      }
+      .webf3{
+        font-family: 'Lacquer', sans-serif;
+        background-color:#ed1250;
+        color:#ffdd67;
+      }
+
+@font-face{
+  font-family:SeoulHangang;
+  src:url('font/SeoulHangang.woff') format('woff');
+}
+      .webf4{
+        font-family:SeoulHangang;
+        font-size:36px;
+        color:#38470b;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!--tt1 : 맑은고딕이 없으면 돋움체, 돋움체가 없으면, 굴림체를 사용한다.-->
+    <h1>글꼴의 종류:font-family</h1>
+    <p>
+      <span class="tt1">둘 이상의 글꼴을 지정할때</span><br>
+      <span class="tt2">여기는 굴림체나 바탕체로</span><br>
+      <span class="tt3">여기는 궁서체로</span>
+    </p>
+<hr>
+
+    <h1>글꼴스타일:font-style</h1>
+    <p> normal,
+      <span class="tt4">italic기울임체</span>
+      <span class="tt5">oblique기울임체</span>
+    </p>
+<hr>
+
+    <h1>글꼴 굵기:font-weight</h1>
+    <p>보통문자와 <span class="tt6">굵은문자</span>
+      <span class="tt7"> 수치가 제일 큰 글자(100~900)</span>
+    </p>
+<hr>
+
+    <h1>글꼴크기:font-size</h1>
+    <p>
+      <span class="tt8">xx-small</span><br>
+      <span class="tt9">x-small</span><br>
+      <span class="tt10">small</span><br>
+      <span class="tt11">medium</span><br>
+      <span class="tt12">large</span><br>
+      <span class="tt13">x-large</span><br>
+      <span class="tt14">xx-large</span><br>
+      <span class="tt15">smaller</span><br>
+      <span class="tt16">12pt</span><br>
+      <span class="tt17">5px</span><br>
+      <span class="tt18">180%</span><br>
+    </p>
+<hr>
+
+  <h1>웹폰트 사용하기</h1>
+  <!--CDN방식:무료구글주소를 연결하여 적용하는 방법-->
+    <p class="webf1">나눔고딕을 웹폰트로 사용합니다.</p>
+    <p class="webf11">나눔명조를 웹폰트로 사용합니다.</p>
+    <p class="webf2">webdesign and webpublishing</p>
+    <p class="webf3">Tak Ju Young</p>
+
+  <!--서버에 직접 업로드 한 후 적용하는 방법-->
+    <p class="webf4">서버에 업로드하여 웹폰트 적용하기</p>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+  h1 {
+    color:#fff;
+    background-color:#aee7e8;
+  }
+  h3 {
+    text-align:center;
+  }
+  p {
+    margin-left:200px;
+  }
+  body {
+    background-color:#ccc;
+  }
