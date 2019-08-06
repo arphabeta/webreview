@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css11-opacity속성</title>
+    <style>
+    body{background-image:url(bg-img1.png);}
+      .box{
+        width:200px;
+        height:200px;
+        text-align:center;
+        color:#fff;
+        font-size:26px;
+
+        /*
+        background-color:#000;
+        opacity:0.4;  ->불투명도 40%
+        위의 방법으로 불투명도를 사용하게 되면 배경이외의 것(예 :글자 등)도 같이
+        불투명해진다.->해결방법:rgba를 사용한다.
+        */
+        backroung:rgba(0,0,0,0.4);
+
+      }
+    </style>
+  </head>
+  <body>
+    <h1>opacity:값(0~1사이):태그의 투명도 </h1>
+    <table class="box">
+      <tr><td>Test</td><td>Test</td></tr>
+      <tr><td>Test</td><td>Test</td></tr>
+      <tr><td>Test</td><td>Test</td></tr>
+    </table>
+  </body>
+</html>

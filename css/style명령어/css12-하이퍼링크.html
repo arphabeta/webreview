@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css12-하이퍼링크</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+      body{
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size:14px;
+        color:#666;
+      }
+      h1{
+        font-size:24px;
+        color:#333;
+        border-left:solid 5px #f00;
+        padding-left:15px;
+      }
+      p{line-height:26px;}
+
+      /*
+      a:link, a:visited, a:active, a:hover{text-decoration:none;}
+      모든 상태의 하이퍼링크 밑줄 없애기*/
+      a{text-decoration:none;}
+
+      /*기본하이퍼링크 설정*/
+      a{
+        color:skyblue;
+        font-size: 16px;
+        font-weight:bold;
+      }
+      a:hover{/*마우스 오버시*/
+        color:#333;
+        text-decoration:underline;
+      }
+
+      /*하이퍼링크설정-1*/
+      .link1 a{color:orange;}
+      .link1 a:hover{color:brown; text-decoration:none;}
+
+      /*하이퍼링크설정-2*/
+      .link2 a{color:pink; font-weight:normal;} /*normal->진하게 적용한 것을 해제*/
+      .link2 a:hover{color:purple; text-decoration:none;}
+
+      .link2{text-align:center;}
+
+    </style>
+  </head>
+  <body>
+<h1>하이퍼링크란?</h1>
+<p>
+  인터넷에서 홈페이지를 방문한 경우 <a href="#">파란글자</a>에
+  밑줄이 있는 글자나 어떤 그림이나 사진에 마우스 포이트를 올려놓으면
+  마우스 포인트가 화살표 모양에서 손 모양으로 바뀌는 것을 본 적이 있을 것이다.
+  이렇게 마우스가 손 모양으로 바뀌는 것을 하이퍼 텍스트라고 하며,
+  하이퍼텍스트를 클릭하면 연결되어 있는 다른 페이지가 나타난다.
+  하이퍼텍스트를 클릭하였을 때 다른 문서로 연결시켜주는 것을
+  <span class="link1"><a href="#">하이퍼링크(HYPERLINK)</a></span>라고 한다.</p>
+
+  <p>
+ html에서는 한 문서에 한개의 하이퍼링크 설정만 할 수 있엇지만,
+ css에서는 class를 이용해 한 문서에 여러개의 하이퍼링크 설정을 할 수 있다.
+  </p>
+  <div class="link2">
+    <a href="#">BACK</a> l <a href="#">LIST</a> l <a href="#">NEXT</a>
+  </div>
+  </body>
+</html>

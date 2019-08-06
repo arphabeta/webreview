@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css10-그림자효과</title>
+    <style>
+      body{
+        font-family:arial;
+        background-color:#808080;
+      }
+      .shadow1{
+        font-size:48px;
+        color:#fff;
+        text-shadow:3px 3px 10px #000;
+        /*오른쪽거리 아래쪽거리 흐림도 색상*/
+      }
+
+      .shadow2{
+        font-size:55px;
+        color:#000;
+        text-shadow:-3px -3px 5px #fff;
+      }
+
+      .shadow3{
+        font-size:55px;
+        color:#fff;
+        text-shadow:0 0 4px #ccc,
+        0 -5px 4px #ff3,
+        2px -10px 6px #fd3,
+        -2px -15px 11px #f80,
+        2px -19px 18px #f20;
+        /*오른쪽거리 아래쪽거리 흐림도 색상*/
+      }
+
+      div{
+        border:3px solid #000;
+        background-color:#fff;
+        text-shadow:5px 2px 5px #f00;
+        box-shadow:10px 10px 30px #000;
+      }
+
+      .bttn{
+        width:200px;
+        height:100px;
+        background-color:blue;
+        border:1px solid #000;
+        border-radius:50px;
+        margin:50px;
+      }
+
+      #shd1{box-shadow:10px 10px 5px #666;}
+      #shd2{box-shadow:10px 10px 50px #fff inset;} /*inset 안쪽 그림자*/
+
+    </style>
+  </head>
+  <body>
+    <h1>텍스트 그림자효과:text-shadow</h1>
+    <h2 class="shadow1">Joandora</h2>
+    <h2 class="shadow2">Joandora</h2>
+    <h2 class="shadow3">Joandora</h2>
+
+    <h1>박스 그림자효과:box-shadow</h1>
+    <div>
+      <h1>Lorem ipsum dolor amet</h1>
+    </div>
+
+    <div class="bttn" id="shd1"></div>
+    <div class="bttn" id="shd2"></div>
+
+  </body>
+</html>
