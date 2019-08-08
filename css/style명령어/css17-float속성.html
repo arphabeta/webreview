@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css17-float속성.html</title>
+    <style>
+      img{float:left;}
+      /*.clear{clear:left;}*/ /*float속성을 해지시키는 것. float가 left면 left, float가 right면 right;*/
+      .clear{clear:both;}/*float해제- 어느쪽에 있든 해제. 많이 씀*/
+    </style>
+  </head>
+  <body>
+    <img src="pets.jpg">
+    <p>
+    float속성:요소의 배치를 제어할 때 사용하는 속성<br>
+    -left:태그를 왼쪽에 붙입니다.<br>
+    -right:태그를 오른쪽에 붙입니다.<br>
+    -none:레이아웃을 정렬하지 않음.<br>
+    </p>
+    <p class="clear">float속성이 해제됩니다.</p>
+  </body>
+</html>

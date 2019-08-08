@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      /*해결방법1-자식이 모두 float를 사용할때 부모가 높이를 인식하지 못하기 때문에
+      맨뒤에 float가 해지된 내용이 없는 빈 자식을 만든다.
+      부모태그에, html에 쓰는 방법.
+      세팅파일에 만들어놓고 불르기만 함. row2에 clear클래스만 불러왔듯이.
+      */
+      .clear:after{
+        content:"";
+        display:block;
+        clear:both;
+      }
+      *{margin:0;padding:0;} /*모든 태그의 여백을 0으로*/
+      h1{text-align:center;}
+
+    </style>
+  </head>
+  <body>
+    <div id="wrap"> <!-- -->
+      <div id="header">
+        <h1>Header</h1>
+      </div>
+
+      <div id="navigation">
+        <h1>Navigation</h1>
+      </div>
+
+      <div id="contents">
+          <div class="aside">
+            <h1>Aside</h1>
+          </div>
+          <div class="section">
+            <h1>Section</h1>
+          </div>
+      </div>
+
+      <div id="footer">
+        <h1>Footer</h1>
+      </div>
+
+    </div>
+  </body>
+</html>

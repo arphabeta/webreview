@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css16-position속성연습.html</title>
+    <style>
+      .box1, .box2, .box3{
+        width:200px;
+        height:200px;
+        border-style:solid;
+        border-color:#000000;
+        position:relative;
+        text-align:center;
+        font-size:xx-large;
+        color:yellow;
+      }
+      .box1{
+        background:red;
+        position:absolute;
+        z-index:300;
+      }
+      .box2{
+        background-color:blue;
+        position:absolute;
+        top:30px;
+        left:150px;
+        z-index:200;
+      }
+      .box3{
+        background-color:green;
+        position:absolute;
+        top:150px;
+        left:30px;
+        z-index:100;
+      }
+      .top{
+        position:fixed;
+        right:10px;
+        bottom:10px;
+        z-index:1000; /*페이지상의 제일 위에 오게 하기 위해 제일 큰 숫자 설정
+                        페이지 콘텐츠 밑에 top이 깔릴 수 있기 때문에*/
+      }
+      .top p{ /*top 안의 p: 후손선택자*/
+        width:50px;
+        height:35px;
+        background-color:pink;
+        text-align:center;
+        font-weight:bold;
+        padding-top:15px;
+      }
+
+      .main{/*부모*/
+         width:800px;
+         height:500px;
+         background:yellow;
+         position:relative;
+         top:500px;
+         left:300px;
+      }
+
+      .sub{ /*자식*/
+         width:100px;
+         height:100px;
+         background:red;
+         position:absolute; /*부모를 기준으로 위치설정-절대값*/
+         top:100px; /*부모를 기준으로 위치설정-절대값*/
+         right:100px; /*부모를 기준으로 위치설정-절대값*/
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="box1">
+      <h1>A</h1>
+    </div>
+    <div class="box2">
+      <h1>B</h1>
+    </div>
+    <div class="box3">
+      <h1>C</h1>
+    </div>
+
+    <div class="top">
+      <p>TOP</p>
+    </div>
+
+    <div class="main">
+      <div class="sub">SUB</div>
+    </div>
+
+
+
+
+  </body>
+</html>

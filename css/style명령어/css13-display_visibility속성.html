@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css13-display_visibility속성.html</title>
+    <style>
+      .box1{display:none;}
+      .box2{display:block;}
+      .box3{
+        display:inline; /*block태그를 inline태그로 변경*/
+        background-color:#f00;
+        width:300px;
+        height:200px;
+        margin:100px;
+      }
+      .box4{
+        display:inline-block; /*block태그를 inline태그로 변경*/
+        background-color:#f00;
+        width:300px;
+        height:200px;
+        margin:100px;
+      }
+      .box5{visibility:none;}
+    </style>
+
+  </head>
+
+  <body>
+    <h1>display:none</h1>
+    <h3>태그를 보이지 않게 만듬(공간을 차지하지 않음)</h3>
+    <span>Dummy</span>
+    <div class="box1">
+      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+    </div>
+    <span>Dummy</span>
+
+    <h1>display:block</h1>
+    <h3>block은 한줄을 다 차지해서 보여줌</h3>
+    <span>Dummy</span>
+    <div class="box2">
+      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+    </div>
+    <span>Dummy</span>
+
+    <h1>display:inline</h1>
+    <h3>width,height 적용되지 않음, margin은 좌우만 적용됨</h3>
+    <span>Dummy</span>
+    <div class="box3">
+      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+    </div>
+    <span>Dummy</span>
+
+    <h1>display:inline-block</h1>
+    <h3>width,height,margin 모두 적용됨</h3>
+    <span>Dummy</span>
+    <div class="box4">
+      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+    </div>
+    <span>Dummy</span>
+
+<hr>
+    <h1>visibility:hidden</h1> <!--dislay:none과 비슷하지만 공간을 차지하는 면에서 다르다. -->
+    <h3>태그를 보이지 않게 만듬(공간을 차지함)</h3> <!-- 메뉴에 많이 쓰는 태그 -->
+    <span>Dummy</span>
+    <div class="box5">
+      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+    </div>
+    <span>Dummy</span>
+
+<h1>visibility:visible</h1>
+<h3>태그를 보이게 만듬</h3>
+
+
+  </body>
+</html>

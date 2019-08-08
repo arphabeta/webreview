@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css18-float속성이해하기.html</title>
+    <style>
+    /*해결방법1-자식이 모두 float를 사용할때 부모가 높이를 인식하지 못하기 때문에
+    맨뒤에 float가 해지된 내용이 없는 빈 자식을 만든다.
+    부모태그에, html에 쓰는 방법.
+    세팅파일에 만들어놓고 불르기만 함. row2에 clear클래스만 불러왔듯이.
+    */
+    .clear:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+      #row1{
+        width:500px;
+        border:5px solid #999;
+        margin:20px auto; /*요소의 가운데 정렬. 글자가 아니라 div나 태그가. 화면상에 출력되는 모양들이 가운데 정렬!*/
+        /*overflow:hidden;
+        해결방법1-자식이 모두 float를 적용하면
+        부모가 높이를 인식하지 못하는 문제를 해결하기 위해 사용함.
+        css에 쓰는 방법*/
+
+      }
+
+      #row1 #box01{ /*후손 선택자*/
+        width:100px;
+        height:100px;
+        border:1px solid #999;
+        margin:5px;
+        padding:5px;
+        float:left;
+      }
+
+      #row1 #box02{
+        width:100px;
+        height:100px;
+        border:1px solid #999;
+        margin:5px;
+        padding:5px;
+        float:left;
+      }
+
+      #row2{
+        width:500px;
+        border:5px solid #999;
+        margin:20px auto;
+      }
+
+      #row2 #box01{ /*후손 선택자*/
+        width:100px;
+        height:100px;
+        border:1px solid #999;
+        margin:5px;
+        padding:5px;
+        float:right;
+      }
+
+      #row2 #box02{
+        width:100px;
+        height:100px;
+        border:1px solid #999;
+        margin:5px;
+        padding:5px;
+        float:right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="row1" class="clear">
+      <div id="box01">box01</div>
+      <div id="box02">box02</div>
+    </div>
+
+    <div id="row2" class="clear">
+      <div id="box01">box01</div>
+      <div id="box02">box02</div>
+    </div>
+
+
+  </body>
+</html>
