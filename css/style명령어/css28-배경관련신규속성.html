@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css28-배경관련신규속성</title>
+    <style>
+html{
+  background:url(crop.jpg) no-repeat center center fixed;
+  background-size:cover; /*이미지가 배경에 꽉 채워짐. 배경이미지 FullScreen으로 적용할 때 사용*/
+  /*background-size:contain; */
+  /*background-size:auto;*/
+}
+/*background-size: 배경이미지의 크기 조절
+background-size:cover; ->너비나 높이 중 큰 값을 배경 이미지가 삽입되는 요소에 맞춤
+background-size:contain; -> 너비나 높이 중 작은 값을 배경 이미지가 삽입되는 요소에 맞춤
+background-size:auto; ->원래 배경이미지 만큼 표시
+*/
+
+.intro1, .intro2, .intro3{
+  width:400px;
+  border:15px solid transparent; /*transparent -> 투명*/
+  border-radius:20px;
+  background:#ccc;
+  margin-bottom:15px;
+  padding:15px;
+}
+
+/* //// 배경 적용 범위 조절 //// */
+
+.intro1{background-clip:border-box;}
+/*박스모델의 가장 외곽인 테두리(border)까지 적용*/
+.intro2{background-clip:padding-box;}
+/*박스모델에서 테두리를 밴 패딩(padding)범위 까지 적용*/
+.intro3{background-clip:content-box;}
+/*박스모델에서 내용 부분에만 적용 */
+
+
+.intro4, .intro5, .intro6 {
+  width:400px;
+  border:15px solid skyblue;
+  background:url(bg4.png) no-repeat right bottom #ccc;
+  margin-bottom:15px;
+  padding:15px;
+}
+
+/* //// 배경이미지 위치기준 조절 //// */
+
+.intro4{background-origin:border-box;}
+/*박스모델의 가장 외곽인 테두리(border)까지 적용*/
+.intro5{background-origin:padding-box;}
+/*박스모델에서 테두리를 밴 패딩(padding)범위 까지 적용*/
+.intro6{background-origin:content-box;}
+/*박스모델에서 내용 부분에만 적용 */
+
+
+
+    </style>
+  </head>
+  <body>
+<h1>배경이미지의 크기 조절 : background-size</h1> <!-- 제일 많이 사용함 -->
+
+<h1>배경적용범위 조절 : background-clip</h1>
+<div id="contents">
+  <div class="intro1">
+    <p>입실은 오후 3시, 퇴실은 오전 11시 입니다.</p>
+    <p>이곳은 관광지가 아닌, 귤농사를 짓는 중산간 마을입니다.
+        바베큐, 야외식사 등 바깥채, 외부 앞뜰에서의 활동은 밤 11시 이전까지
+        마쳐 주셔야 합니다. 바깥채 내부의 소등은 자유롭게 하시되,
+        자정 이후로 음주나 소란스러운 대화를 자제해 주시면 고맙겠습니다.</p>
+  </div>
+  <div class="intro2">
+    <p>입실은 오후 3시, 퇴실은 오전 11시 입니다.</p>
+    <p>이곳은 관광지가 아닌, 귤농사를 짓는 중산간 마을입니다.
+        바베큐, 야외식사 등 바깥채, 외부 앞뜰에서의 활동은 밤 11시 이전까지
+        마쳐 주셔야 합니다. 바깥채 내부의 소등은 자유롭게 하시되,
+        자정 이후로 음주나 소란스러운 대화를 자제해 주시면 고맙겠습니다.</p>
+  </div>
+  <div class="intro3">
+    <p>입실은 오후 3시, 퇴실은 오전 11시 입니다.</p>
+    <p>이곳은 관광지가 아닌, 귤농사를 짓는 중산간 마을입니다.
+        바베큐, 야외식사 등 바깥채, 외부 앞뜰에서의 활동은 밤 11시 이전까지
+        마쳐 주셔야 합니다. 바깥채 내부의 소등은 자유롭게 하시되,
+        자정 이후로 음주나 소란스러운 대화를 자제해 주시면 고맙겠습니다.</p>
+  </div>
+</div>
+
+<h1>배경이미지 위치기준 조절하기 : background-origin</h1>
+<div id="contents">
+  <div class="intro4">
+    <p>입실은 오후 3시, 퇴실은 오전 11시 입니다.</p>
+    <p>이곳은 관광지가 아닌, 귤농사를 짓는 중산간 마을입니다.
+        바베큐, 야외식사 등 바깥채, 외부 앞뜰에서의 활동은 밤 11시 이전까지
+        마쳐 주셔야 합니다. 바깥채 내부의 소등은 자유롭게 하시되,
+        자정 이후로 음주나 소란스러운 대화를 자제해 주시면 고맙겠습니다.</p>
+  </div>
+  <div class="intro5">
+    <p>입실은 오후 3시, 퇴실은 오전 11시 입니다.</p>
+    <p>이곳은 관광지가 아닌, 귤농사를 짓는 중산간 마을입니다.
+        바베큐, 야외식사 등 바깥채, 외부 앞뜰에서의 활동은 밤 11시 이전까지
+        마쳐 주셔야 합니다. 바깥채 내부의 소등은 자유롭게 하시되,
+        자정 이후로 음주나 소란스러운 대화를 자제해 주시면 고맙겠습니다.</p>
+  </div>
+  <div class="intro6">
+    <p>입실은 오후 3시, 퇴실은 오전 11시 입니다.</p>
+    <p>이곳은 관광지가 아닌, 귤농사를 짓는 중산간 마을입니다.
+        바베큐, 야외식사 등 바깥채, 외부 앞뜰에서의 활동은 밤 11시 이전까지
+        마쳐 주셔야 합니다. 바깥채 내부의 소등은 자유롭게 하시되,
+        자정 이후로 음주나 소란스러운 대화를 자제해 주시면 고맙겠습니다.</p>
+  </div>
+</div>
+  </body>
+</html>
