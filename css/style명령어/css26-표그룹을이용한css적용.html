@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css26-표그룹을이용한css적용</title>
+    <style>
+      /*모두 머리 몸통 꼬리로 나눌 수 잇다.
+      열도 나눌 수 있음.
+      */
+thead{background-color:green; color:#fff;}
+tfoot{background-color:orange;font-size:20px;}
+
+.col1{background-color:red;}
+.col2{background-color:blue;}
+
+    </style>
+  </head>
+  <body>
+
+<table border="1px">
+  <caption>Caption</caption> <!-- 표제목 -->
+
+  <!-- 표의 열그룹 -->
+  <colgroup>
+      <col span="2" class="col1"> <!-- 표의 3열중 2열-->
+      <col class="col2"> <!-- 표의 3열중 1열. 숫자가 1인것은 쓰지 않는다. 1이상일때만 숫자쓸 것 -->
+  </colgroup>
+
+  <thead> <!--표의 머리 -->
+      <tr>
+        <th>Table Header</th>
+        <th>Table Header</th>
+        <th>Table Header</th>
+      </tr>
+  </thead>
+
+  <tbody> <!-- 표의 본문 -->
+    <tr>
+      <td>Table Data</td>
+      <td>Table Data</td>
+      <td>Table Data</td>
+    </tr>
+    <tr>
+      <td>Table Data</td>
+      <td>Table Data</td>
+      <td>Table Data</td>
+    </tr>
+    <tr>
+      <td>Table Data</td>
+      <td>Table Data</td>
+      <td>Table Data</td>
+    </tr>
+  </tbody>
+
+  <tfoot> <!-- 표의 꼬리 -->
+  <tr>
+    <td>Table Footer</td>
+    <td>Table Footer</td>
+    <td>Table Footer</td>
+  </tr>
+</tfoot>
+
+
+  </body>
+</html>

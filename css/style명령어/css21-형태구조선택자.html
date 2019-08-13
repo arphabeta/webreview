@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css21-형태구조선택자</title>
+    <style>
+    /*형태구조 선택자: class나 id 말고도 내가 원하는 위치를 꾸밀 수 있게 하는 것*/
+    h1:first-of-type{color:red;} /*h1 태그 중 첫번째*/
+    h2:first-of-type{color:orange;} /*h2 태그 중 첫번째*/
+    h3:first-of-type{color:blue;}/*h3 태그 중 첫번째*/
+    h3:last-of-type{color:green;}/*h3 태그 중 마지막번쩨*/
+    h2:nth-of-type(2){color:skyblue} /*h2 태그 중 앞에서 2번째*/
+    h3:nth-of-type(2){color:pink} /*h3 태그 중 앞에서 2번째*/
+    h3:nth-last-of-type(3){color:gray;} /*h3 태그 중 뒤에서 3번째*/
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Header - 1</h1>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+    <h3>Header - 3</h3>
+    <h3>Header - 3</h3>
+    <h3>Header - 3</h3>
+    <h3>Header - 3</h3>
+    <h3>Header - 3</h3>
+    <h2>Header - 2</h2>
+    <h1>Header - 1</h1>
+
+  </body>
+</html>

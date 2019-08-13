@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css20-자손후손선택자</title>
+    <style>
+    /*  #header h1{ /*후손 선택자. 부모안에 있는 모든 태그에 다 스타일이 적용됨*/
+      /*  color:red;
+      }*/
+      #header > h1{ /*자손선택자*/
+        color:red; /*header 안에 있는 1번째 자식만 수식됨*/
+      } /*메뉴에 많이 쓰임. 주메뉴만 서술하고 서브메뉴는 꾸미지 않을 때. 꾸미는 범위를 좁힐 때*/
+
+    </style>
+  </head>
+  <body>
+    <!--선택자 {} 선택자 : 태그, id, class, *(모든태그) -->
+
+    <!-- 범위문제
+*자손선택자 : 선택자A 바로 한단계 아래에 위치한 태그 (직계)
+
+선택자A>선택자b
+
+
+*후손 선택자(모든자식 요소) : 선택자A 태그아래에 위차한 모든 태그 (더 넓은 관계) 90%이상이 후손선택자/ 헷갈리면 후손 써라!
+
+선택자 A 선택자B
+      -->
+<h2>*자손후손선택자*</h2>
+<div id="header">
+  <h1 class="title">Lorem ipsum</h1>
+  <h1 class="title">Lorem ipsum</h1>
+  <div id="nav">
+    <h1>Navigation</h1>
+    <h1>Navigation</h1>
+    <h1>Navigation</h1>
+  </div>
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css23-일반과형태구조선택자의차이</title>
+    <style>
+
+p:nth-child(3){color:red;font-weight:bold;} /*일반구조선택자*/
+p:nth-of-type(3){color:green;font-weight:bold;} /*형태구조선택자*/
+
+    </style>
+  </head>
+  <body>
+<div>
+  <p>구조선택자</p>
+  <span></span>
+  <p>구조선택자</p> <!--p:nth-child(3) 일반구조 -->
+  <span></span>
+  <p>구조선택자</p> <!-- p:nth-of-type(3) -->
+</div>
+
+
+
+  </body>
+</html>
+<!--
+*nth-child 일반구조선택자는
+부모요소의 모든 자식요소를 대상으로 n번째 자식을 선택하고, (보통 일반구조선택자를 주로 사용함)
+-해당 부모의 모든 자식 중에서 몇번째
+
+*nth-of-type 형태구조선택자는 부모요소의 특정 요소만을 대상으로 n번째 자식을 선택한다.
+ -li태그 중에서(중간에 섞인 태그를 제외한 순수li 중에서) 몇번째
+-->

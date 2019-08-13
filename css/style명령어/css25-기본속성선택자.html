@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css25-기본속성선택자</title>
+    <style>
+      /*input{ background-color:yellow;  }
+      input선택자에 적용하면 input 의 모든 type에 적용됨
+      */
+
+      /*
+       type 별로 각각의 다른 속성을 적용하고자 할 때 사용
+      */
+      input[type=text]{background-color:red;}
+      input[type=password]{background-color:blue;}
+    </style>
+  </head>
+  <body>
+
+<h1>기본속성선택자 : 선택자 [속성=값]</h1>
+
+<form>
+  <input type="text">
+  <input type="password">
+</form>
+
+
+  </body>
+</html>

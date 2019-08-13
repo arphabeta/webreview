@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css24-동위선택자</title>
+    <style>
+h1+h2{color:red;}
+/*h1태그의 바로 뒤에 위치하는 h2태그의 color 속성에 red를 적용*/
+
+h1~h2{background-color:orange;}
+/*h1 태그의 뒤에 위치하는 h2태그의 background 속성에 orange를 적용*/
+    </style>
+  </head>
+  <body>
+    <h1>Header - 1</h1>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+    <h2>Header - 2</h2>
+    <h3>Header - 3</h3>
+    <h2>Header - 2</h2>
+
+  </body>
+</html>
