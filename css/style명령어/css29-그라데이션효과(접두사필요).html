@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css29-그라데이션효과(접두사필요)</title>
+    <style>
+      body{
+        background:-webkit-linear-gradient(to bottom, skyblue,white 50%); /* 크롬, 사파리*/
+        background:-moz-linear-gradient(to bottom, skyblue,white 50%);/*파이어폭스 */ /*다른 인터넷 브라우저나 낮은 버전의 브라우저도 이 명령어를 읽을 수 있도록 버전업시키는 것.*/
+        background:-ms-linear-gradient(to bottom, skyblue,white 50%);/*익스플로러 */
+        background:-o-linear-gradient(to bottom, skyblue,white 50%);/* 오페라*/
+        background:linear-gradient(to bottom, skyblue,white 50%);/* */
+        background-attachment:fixed;
+      }
+      .box11{
+        width:400px;
+        height:200px;
+        background-color:#f00;
+        /*그라데이션을 지원하지 않는 브라우저를 위한 배경지정*/
+        background:linear-gradient(45deg, #f00,#fff);
+      }
+      .box12{
+        width:400px;
+        height:200px;
+        background-color:blue;
+        /*그라데이션을 지원하지 않는 브라우저를 위한 배경지정*/
+        background:linear-gradient(to bottom,blue,white);
+      }
+      .box13{
+        width:400px;
+        height:200px;
+        background-color:blue;
+        /*그라데이션을 지원하지 않는 브라우저를 위한 배경지정*/
+        background:linear-gradient(150deg,blue,white,yellow);
+      }
+      .box2{
+        width:400px;
+        height:200px;
+        background-color:skyblue;
+        /*그라데이션을 지원하지 않는 브라우저를 위한 배경지정*/
+        background:radial-gradient(circle,white,blue);
+      }
+      /*지원하는 사이트에서 소스복사해오기
+      https://www.colorzilla.com/gradient-editor/
+      */ /*사이트 웹팁-2페이지*/
+      .box3{
+        width:400px;
+        height:200px;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+45,ff5c5c+100&1+0,0.65+31,1+100 */
+        background: -moz-radial-gradient(center, ellipse cover,  rgba(254,187,187,1) 0%, rgba(254,157,157,0.65) 31%, rgba(254,144,144,0.72) 45%, rgba(255,92,92,1) 100%); /* FF3.6-15 */
+        background: -webkit-radial-gradient(center, ellipse cover,  rgba(254,187,187,1) 0%,rgba(254,157,157,0.65) 31%,rgba(254,144,144,0.72) 45%,rgba(255,92,92,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: radial-gradient(ellipse at center,  rgba(254,187,187,1) 0%,rgba(254,157,157,0.65) 31%,rgba(254,144,144,0.72) 45%,rgba(255,92,92,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#febbbb', endColorstr='#ff5c5c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+      }
+
+
+    </style>
+
+  </head>
+  <body>
+
+<div class="box11"><h2>선형그라데이션</h2></div>
+<div class="box12"><h2>선형그라데이션</h2></div>
+<div class="box13"><h2>선형그라데이션</h2></div>
+<div class="box2"><h2>선형그라데이션</h2></div>
+<div class="box3"><h2>선형그라데이션</h2></div>
+
+<!--
+linear-gradient(45deg, #f85032 0%, #73827 100%) ->선형
+                 각도   색상    위치
+
+*선형그라데이션 위치값
+to top(아래에서 시작하여 위로 그라데이션이 만들어짐)
+to left(오른쪽에서 시작하여 왼쪽으로 그라데이션이 만들어짐)
+to right(왼쪽에서 시작하여 오른쪽으로 그라데이션이 만들어짐)
+to bottom(위에서 시작하여 아래로 그라데이션이 만들어짐)
+
+radial-gradient(위치,모양(및크기),색상...) ->원형
+-->
+
+
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css34-transform속성(접두사필요)</title>
+    <style>
+      .box{
+        width:100px;
+        height:100px;
+        margin-top:20px;
+        margin-left:50px;
+      }
+       /*위치속성 : */
+      .box1{transform:translate(150px,50px); background-color:red; }
+        /*box1{transform:translateX(150px) translateY(50px)}*/
+
+      /*크기속성*/
+      .box2{transform:scale(1.2,1.2);background-color:blue;} /*scale안에 있는 괄호 숫자는 1.2배를 뜻한다.*/
+
+      /*기울기속성*/
+      .box3{transform:skew(10deg,10deg);background-color:green;}
+
+      /*회전속성*/
+      .box4{transform:rotate(30deg);background-color:orange;}
+
+      /*속성 한꺼번에 적용*/
+      .box5{transform:translate(150px,0px) scale(1.2,1.2) skew(10deg,10deg)
+            rotate(30deg); background-color:skyblue;}
+
+      /*트랜지션:
+      트랜스폼:혼자사용하기보다 트랜지션이랑 같이사용 (요소의 위치,크기,기울,회전의 속성을 움직이게하는 것)
+      애니메이션:왔다갔다 간단한 애니메이션 명령어
+      필터 : 우리가 흔히 생각하는 필터 속성을 주는 것*/
+    </style>
+  </head>
+  <body>
+    <div id="graph"> <!--css3(?)부터는 2개 이상의 클래스를 부를 수 있다.-->
+      <div class="box box1">BOX1</div>
+      <div class="box box2">BOX2</div>
+      <div class="box box3">BOX3</div>
+      <div class="box box4">BOX4</div>
+      <div class="box box5">BOX5</div>
+    </div>
+
+  </body>
+</html>
+
+
+<!--
+*객체를 변형시키는 transform 속성(위치이동, 크기, 왜곡, 회전)
+
+transform:translate(X크기,Y크기) ->x,y크기만큼 이동
+transform:translateX(X크기)->x크기만큼 이동
+transform:translateY(Y크기)->y크기만큼 이동
+transform:scale(X크기,Y크기)->x,y배율만큼 늘어나거나 줄어듬
+transform:scaleX(X크기)->x만큼 확대나 축소
+transform:scaleY(Y크기)->y만큼 확대나 축소
+transform:skew(X각도,Y각도)->x,y만큼 기울이기
+transform:skewX(X각도)->x만큼 기울이기
+transform:skewY(Y각도)->y만큼 기울이기
+transform:rotate(각도)->각도만큼 회전
+
+-->

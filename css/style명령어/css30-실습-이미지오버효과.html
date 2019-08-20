@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css30-실습-이미지오버효과</title>
+    <style>
+      *{margin:0;padding:0;}
+      body{background:#ccc;}
+      .contents{
+        width:870px;
+        margin:0 auto; /*요소의 가운데 정렬, width 값이 반드시 나와있어야함. 100% 면 쓸 이유가 없음*/
+        margin-top:50px;
+        /*background-color:pink;*/
+      }
+      h2{
+        font-size:20px;
+        color:#333;
+      }
+      h3{
+        font-size:16px;
+        color:#666;
+        margin:15px 0;
+        font-weight:normal; /*h태그에 기본굵기를 해제*/
+      }
+      .img1 img{ /*후손선택자*/
+        border:1px solid #999;
+        margin-right:10px;
+      }
+
+      .img1 img:hover{ /*img 태그에 마우스를 올렸을때*/
+        border:1px solid #f00;
+        border-radius:10px;
+        opacity:0.5;
+        cursor:pointer; /*a 태그가 아닌 마우스커서 손모양이 나오게 하는 명령어*/
+
+      }
+
+      .mc01, .mc02, .mc03{
+        width:200px; /*빈곳에 이미지를 배경으로 넣으려면 width, height를 넣어야함*/
+        height:200px;
+        border:1px solid #999;
+        border-radius:50%;
+        float:left;
+        margin:40px 30px;
+        cursor:pointer;
+      }
+      .mc01{
+        background-image:url(product3.png);
+        background-position:-40px -10px;
+      }
+      .mc01:hover{
+        border:2px solid #000;
+      }
+      .mc02{
+        background-image:url(product9.png);
+        background-position:-40px -10px;
+      }
+      .mc02:hover{
+        border:2px dotted #ff0000;
+        opacity:0.6;
+      }
+      .mc03{
+        background-image:url(product10.png);
+        background-position:-40px -10px;
+      }
+      .mc03:hover{
+        background-image:url(product7.png);
+      }
+
+    </style>
+  </head>
+  <body>
+<div class="contents">
+  <h2>Image Transparency</h2>
+<h3>In IE, a !DOCTYPE must be added for the:
+  hover selector to work on other elements than the a element.</h3>
+
+  <div class="img1">
+      <img src="product9.png" alt="1one_img"> <!--사진을 넣은 것 -->
+      <img src="product10.png" alt="1one_img">
+      <img src="product11.png" alt="1one_img">
+  </div>
+
+  <div class="img2">
+    <div class="mc01"></div> <!--배경으로 깐 것 -->
+    <div class="mc02"></div>
+    <div class="mc03"></div>
+  </div>
+
+</div>
+  </body>
+</html>

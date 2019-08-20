@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css33-실습-display를이용한수평수직가운데</title>
+    <style>
+      *{margin:0;padding:0;}
+
+      a{
+        font-size:12px;
+        text-decoration:none;
+      }
+      .text_box{
+        width:300px;
+        background-color:#c9eafa;
+        padding:10px;
+        display:table; /*표로 만든다.(html에서 table에 해당됨)*/
+      }
+
+      .tr{
+        height:100px;
+        background-color:pink;
+        display:table-row; /*표의 행으로 만든다.(html에서 tr에 해당됨)*/
+      }
+
+      .td{
+        display:table-cell; /*표의 칸으로 만든다.(html에서 td에 해당됨)*/
+        vertical-align:middle;
+      }
+      .txt{width:210px;}
+
+      #wrap {
+        width:700px;
+        height:600px;
+        background-color:#00ccff;
+        border:1px solid #999;
+        margin-top:50px;
+        display:table;
+      }
+      #content{
+        text-align:center;
+        vertical-align:middle;
+        display:table-cell; /*tr은 생략할 수 있다.*/
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="text_box">
+      <div class="tr">
+        <p class="td">박스</p>
+        <p class="td txt"><a href="#">공지사항입니다. 공지사항입니다.</a></p>
+      </div>
+      <div class="tr">
+        <p class="td">박스</p>
+        <p class="td txt"><a href="#">공지사항입니다. 공지사항입니다.
+          공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.</a></p>
+      </div>
+    </div>
+
+    <div id="wrap">
+      <div id="content">
+        <img src="product12.png" alt="상품1">
+        <img src="product12.png" alt="상품2">
+      </div>
+    </div>
+  </body>
+</html>

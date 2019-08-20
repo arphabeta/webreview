@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>css32-실습-여러개의div를수평수직가운데</title>
+    <style>
+      *{margin:0;padding:0;}
+
+      .container{ /*부모박스*/
+        width:100%;
+        height:200px;
+        background-color:#ffcc33;
+        text-align:center; /*자식이 모두 float를 사용했을땐 가운데 정렬이 적용되지 않음*/
+        vertical-align:middle; /*적용되지 않음*/
+        line-height:200px; /*수직정렬가운데를 하기위해 높이만큼 줄간격설정. 편법이지만 가장 많이 쓰는 방법. 거의 다 적용되는 방법이라 실무자들도 많이 씀ㅎ*/
+        /*padding을 쓸 경우 몸체가 커지기 때문에 line-height를 쓰는걸 추천*/
+      }
+      .box{ /*자식박스*/
+        width:100px;
+        height:100px;
+        background-color:#ccc;
+        /*float:left;*/
+        display:inline-block;/*-> 부모의 가운데 정렬이 적용됨*/ /*width, height를 둘다 먹는건 inline-block. 그냥 inline은 width, height 이 안먹음*/
+        /*float는 여백이 없이 붙고, display:inline-block는 여백이 생기기 때문에 float를 더 자주 쓴다.*/
+        margin:0 5px;
+        text-align:center;
+        vertical-align:middle; /*table 이나 h태그가 주로 먹고 다른건 거의 안먹음ㅠㅠ*/
+        /*수직정렬 가운데->적용되지 않음*/
+        line-height:100px; /*수직정렬가운데를 하기위해 높이만큼 줄간격설정. 편법이지만 가장 많이 쓰는 방법. 거의 다 적용되는 방법이라 실무자들도 많이 씀ㅎ*/
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">box01</div>
+      <div class="box">box02</div>
+      <div class="box">box03</div>
+      <div class="box">box04</div>
+      <div class="box">box05</div>
+      <div class="box">box06</div>
+      <div class="box">box07</div>
+    </div>
+  </body>
+</html>
