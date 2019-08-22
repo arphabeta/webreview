@@ -1,0 +1,13 @@
+@import url(common.css);
+
+body{border-top:15px solid #333;}
+.login{border-top:50px solid #ff6633;}
+
+h1{
+  font-size:60px;
+  font-family:arial;
+  letter-spacing:-3px; /*글자간격*/
+  color:#c8c8c8;
+  text-align:center;
+  margin-top:50px;
+}
