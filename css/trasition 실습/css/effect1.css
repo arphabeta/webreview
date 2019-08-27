@@ -1,0 +1,199 @@
+@import url(common.css);
+
+body{
+  background:#d8eaf8;
+  font-size:14px;
+  color:#fff;
+  font-family:Arial, Helvetica, sans-serif;
+}
+#container{
+  width:950px;
+  margin:0 auto;
+  text-align:center;
+  padding:20px 0;
+}
+#container>p{
+  color:#999;
+  margin-bottom:50px;
+}
+
+#container .photo{
+  width:inherit; /*부모값을 상속받음->width:950px;*/
+  overflow:hidden; /*float 문제해결*/
+}
+
+#container .photo li{
+  float:left;
+  width:300px;
+  height:250px;
+  position:relative;
+  margin-bottom:10px;
+  margin-right:10px;
+  cursor:pointer;
+}
+
+#container .photo li img{
+  display:block;
+  /*img는 인라인태그로 가로,세로폭을 적용하기위해 block으로 변경*/
+  width:100%;
+  height:100%;
+}
+
+#container .photo li div{
+  position:absolute;
+  background:#000;
+}
+
+/*1번 이미지*/
+#container .photo li .block1{ /*후손선택자*/
+  width:100%;
+  height:0;
+  background:rgba(0,0,0,0.5);
+  /* background:#000;
+  opacity:0.5; ->글자까지 투명해짐;
+  */
+   transition:all 0.5s ease;
+}
+#container .photo li:hover .block1{ height:100%;}
+
+#container .photo li .block1 .icon{opacity:0;}
+
+#container .photo li:hover .block1 .icon{/*돋보기 아이콘 폰트*/
+  font-size:34px;
+  line-height:240px;
+  opacity:1;
+  transition:all 0.5s ease;
+}
+
+/*2번 이미지*/
+#container .photo li .block2{
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,1);
+  opacity:0;
+  transition:all 0.5s ease-in;
+}
+#container .photo li:hover .block2{opacity:1;}
+
+#container .photo li .block2 p{
+  text-transform:uppercase;
+  border:1px solid #fff;
+  width:140px;
+  padding:10px 0;
+  margin:110px auto 0;
+}
+
+/*3번 이미지*/
+#container .photo li .block3{
+  width:100%;
+  height:0%;
+  background:rgba(0,0,0,1);
+  opacity:0;
+  transition:all 0.5s ease-in;
+}
+
+#container .photo li:hover .block3{
+  height:50px;
+  opacity:1;
+}
+#container .photo li .block3 p{line-height:50px;}
+
+/*4번 이미지*/
+#container .photo li .block4{
+  width:100%;
+  height:0%;
+  background:rgba(0,0,0,1);
+  opacity:0;
+  bottom:0; /*방향이 바뀜*/
+  transition:all 0.5s ease-in;
+}
+
+#container .photo li:hover .block4{
+  height:50px;
+  opacity:1;
+}
+#container .photo li .block4 p{line-height:50px;}
+
+
+/*5번 이미지*/
+#container .photo li .block5{
+  width:0%;
+  height:100%;
+  background:rgba(0,0,0,1);
+  opacity:0;
+  transition:all 0.5s ease-in;
+}
+#container .photo li:hover .block5{
+  width:100%;
+  opacity:1;
+}
+#container .photo li .block5 p{
+  line-height:250px;
+  opacity:0;
+}
+#container .photo li:hover .block5 p{
+  opacity:1;
+}
+
+/*6번 이미지*/
+#container .photo li .block6{
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,1);
+  opacity:0;
+  transform:scale(0,0);
+  transition:all 0.5s ease-in;
+}
+#container .photo li:hover .block6{
+  transform:scale(1,1);
+  opacity:1;
+}
+#container .photo li .block6 p{
+  line-height:250px;
+  opacity:0;
+}
+#container .photo li:hover .block6 p{
+  opacity:1;
+}
+
+
+/*7번 이미지*/
+#container .photo li .block7{
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,1);
+  opacity:1; /*보이니까 1.*/
+  transform:scale(1,1);
+  transition:all 0.5s ease-in;
+}
+#container .photo li:hover .block7{
+  transform:scale(0,0);
+  opacity:0;
+}
+#container .photo li .block7 p{
+  line-height:250px;
+  opacity:1; /*글자가 보이니까 1*/
+}
+#container .photo li:hover .block7 p{
+  opacity:0;
+}
+
+
+/*8번 이미지*/
+#container .photo li:nth-child(8){overflow:hidden;}/*사이즈가 커지면 넘치는 문제를 해결하려고 쓴것.float 해결하려고 쓴 것 아님*/
+#container .photo li:nth-child(8) img{transition:all 0.5s ease;}
+#container .photo li:nth-child(8):hover img{
+  transform:scale(1.4); /*x,y모두 1.4*/
+  filter:blur(4px);/*흐림효과*/
+  -webkit-filter:blur(4px);
+}
+
+
+/*9번 이미지*/
+#container .photo li:nth-child(9){overflow:hidden;}/*사이즈가 커지면 넘치는 문제를 해결하려고 쓴것.float 해결하려고 쓴 것 아님*/
+#container .photo li:nth-child(9) img{transition:all 0.5s ease;}
+#container .photo li:nth-child(9):hover img{
+  transform:scale(1.4); /*x,y모두 1.4*/
+  filter:grayscale(100%);/*흐림효과*/
+  -webkit-filter:grayscale(100%);
+}
