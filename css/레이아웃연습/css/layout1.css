@@ -1,0 +1,129 @@
+@import url(common.css);
+/*
+1단계 : 큰단위 행으로 나눈다.
+  헤더 :로고,유틸메뉴, 주메뉴
+  콘텐츠 : 내용
+  푸터 : ㅇㅇ
+
+2단계 : 열로 나눈다.
+헤더 :
+콘텐츠 :왼쪽, 오른쪽
+푸터 : 나눌거 없음
+
+->큰건 div로 감싸고 div의 안은 p태그나, span태그로 감싸기
+원래 이미지는 다른 css가 잘 안먹기 때문에 다른 태그로 감싸주고 시작한다.
+
+3단계 :
+
+
+블록은 블록도 인라인도 감쌀 수 있다. ->p태그는 블록임에도 불구하고, 감쌀 수 없음.
+인라인은 블록을 감쌀 수 없다. 인라인은 인라인만 들어갈 수 있다.
+*/
+
+
+/*================== Header ====================*/
+#header{
+    width:1000px; /*표준이 1024-84*/
+    height:150px;
+    margin:0 auto 30px; /*상좌우하*//*요소의 가운데정렬. 헤더 덩어리가 페이지의 가운데로 온 것*/
+    position:relative; /*부모에 relative적용*/
+    /*background:pink;*/
+}
+/*margin padding으로 쓰는 방법
+  부모에 relative 를 쓰고 position으로 맞추는 방법 -> 신중해야 함. 둥둥떠있기 때문에 텍스트나 콘텐츠들이 겹치거나 밀려올라올 수 있음. 부모기준에서 움직이는 것. 보통 맨 위에만 쓰고, 중간쯤에는 안씀.*/
+
+/*로고*/
+.logo_area{
+  position:absolute;
+  left:20px;
+  top:30px;
+}
+
+
+/*유틸메뉴*/
+.util_menu{
+  position:absolute;
+  right:0;
+  top:10px;
+}
+.util_menu ul{}
+.util_menu ul li{
+  float:left;
+  padding:0 5px;
+  border-right:1px solid #999;
+}
+.util_menu ul li:last-child{border-right:none;}
+.util_menu ul li a{color:#666;}
+.util_menu ul li a:hover{color:#000;}
+
+
+/*탑메뉴*/
+.top_nav{
+  position:absolute;
+  right:0;
+  bottom:10px;
+}
+.top_nav ul{}
+.top_nav ul li{
+  float:left;
+  padding:15px 30px;
+}
+.top_nav ul li:nth-child(even){background-color:#666;}
+.top_nav ul li:nth-child(odd){background-color:#999;}
+.top_nav ul li:first-child{border-radius:20px 0 0 20px;}
+.top_nav ul li:last-child{border-radius:0 20px 20px 0;}
+
+.top_nav ul li a{
+  display:block; /*이걸 해야 a의 콘텐트가 아니라 a가 포함되어 있는 구역도 클릭할 수 있기 때문*/
+  color:#fff;
+  font-weight:400;
+  font-size:14px;
+}
+.top_nav ul li a:hover{color:#000;font-weight:bold;}
+
+/*================== Contents ====================*/
+
+#contents{
+  width:1000px;
+  height:600px;
+  margin:0 auto; /*요소의 가운데정렬. 헤더 덩어리가 페이지의 가운데로 온 것*/
+}
+.left_content{/*왼쪽 컨텐츠 영역*/
+  width:750px;
+  float:left;
+}
+.right_side{ /*오른쪽 사이드 영역*/
+  width:200px;
+  float:right;
+}
+.content1, .content2, .content3{
+  height:150px;
+  border:1px solid #000;
+  padding:20px;
+  margin-bottom:20px;
+}
+#contents h3{
+  font-size:20px;
+  color:#666;
+  margin-bottom:20px;
+}
+#contents p{
+  font-size:14px;
+  line-height:20px;
+  text-indent:5px;
+}
+
+
+
+/*================== Footer ====================*/
+#footer {
+  clear:both;/*float 문제해결 : 그 다음에 올 부분에 float 해제하는 방법*/
+  width:1000px;
+  height:100px;
+  margin:0 auto 20px;
+  border:1px solid #000;
+}
+#footer h4{
+  text-align:center;
+  line-height:100px;
+}

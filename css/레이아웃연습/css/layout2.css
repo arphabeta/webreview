@@ -1,0 +1,109 @@
+@import url(common.css);
+
+/*
+1단계 : 큰단위 행으로 나눈다.
+  헤더 :로고,유틸메뉴, 주메뉴
+  콘텐츠 : 내용
+  푸터 : ㅇㅇ
+
+2단계 : 열로 나눈다.
+헤더 :
+콘텐츠 :왼쪽, 오른쪽
+푸터 : 나눌거 없음
+
+->큰건 div로 감싸고 div의 안은 p태그나, span태그로 감싸기
+원래 이미지는 다른 css가 잘 안먹기 때문에 다른 태그로 감싸주고 시작한다.
+
+3단계 :
+
+
+블록은 블록도 인라인도 감쌀 수 있다. ->p태그는 블록임에도 불구하고, 감쌀 수 없음.
+인라인은 블록을 감쌀 수 없다. 인라인은 인라인만 들어갈 수 있다.
+*/
+
+
+/*================== Header ====================*/
+#header{
+  width:100%;
+  border-top:5px solid #ccc;
+}
+
+.logo{
+  text-align: center;
+  margin:100px 0;
+}
+/*탑메뉴*/
+.nav{
+  width:100%;
+  height:50px;
+  background:#ccc;
+  text-align:center;
+}
+.nav ul{display:inline-block;} /*그래서 부모에 display:inline-block;을 사용함.*/
+/*nav에 설정한 정렬을 적용시키기위해서 block->inline-block;으로 변경*/
+.nav ul li{float:left;} /*자식에서 float를 적용하면 부모의 tex-align이 적용되지 않는다.*//*float를 쓰면 가운데 정렬 안먹음.*//*메뉴를 가운데로 위치시키는 방법 : 1. margin으로 사용하는 방법 2.text-align:center;*/
+.nav ul li a{
+  display:block;
+  color:#333;
+  font-size:16px;
+  padding:15px 70px;
+}
+.nav ul li a:hover{
+  background:#333;
+  color:#ffcc00;
+}
+
+/*================== Section ====================*/
+#section{
+  width:1050px;
+  margin:20px auto;
+}
+#section .article{
+  float:left;
+  width:600px;
+  height:600px;
+  border:1px solid #ccc;
+  padding:10px;
+  text-align:center;
+}
+#section .aside{
+  float:right;
+  width:310px;
+  height:600px;
+  border:1px solid #ccc;
+  padding:10px;
+  text-align:center;
+}
+#section h3{
+  font-size:18px;
+  margin:10px 0;
+}
+#section .tt{
+  padding:0 20px;
+  font-size:13px;
+  color:#333;
+  line-height:20px;
+  text-align:left;
+}
+#section img{
+  width:100%;
+}
+
+/*================== Footer ====================*/
+#footer{
+  width:100%;
+  border-top:1px solid #ccc;
+}
+.footer_in{
+  width:1050px;
+  margin:20px auto;
+}
+.add{color:#333;}
+.copy{
+  color:#666;
+  margin-top:5px;
+}
+.bd{
+  font-weight:bold;
+  color:#cc0033;
+}
