@@ -1,0 +1,237 @@
+@import url(common.css);
+
+body{background:#e1e1e1;}
+
+/*=========== Header ===========*/
+
+header{
+	width:100%;
+	height:70px;
+	line-height:70px;
+	background:#252525;
+	position:relative;
+	z-index:100;
+}
+.header_in{
+	width:1000px;
+	margin:0 auto;
+}
+
+.header_in>h1{   /*logo*/
+	float:left;
+	margin:20px 120px 0 30px;
+}
+
+
+/*탑메뉴*/
+
+nav{
+	/*float:left;*/
+	position:absolute;
+	margin-left:200px;
+}
+nav>ul{
+	height:70px;
+    overflow:hidden;
+    transition:all 0.5s;
+}
+nav>ul:hover{height:300px;}
+
+nav>ul>.main_menu{   /*주메뉴*/
+	float:left;
+	position:relative;
+	width:110px;
+	height:70px;
+	text-align:center;
+	/*background:pink;*/
+}
+nav>ul>.main_menu>a{
+	display:block;
+	font-size:14px;
+	color:#e8e8e8;
+	font-weight:600;
+}
+nav>ul>.main_menu>span{   /*주메뉴 밑 가로선*/
+	display:block;
+	position:absolute;
+	top:70px;
+	left:0;
+	width:100px;
+	height:2px;
+	opacity:0;
+	transition:all 0.4s;
+}
+nav>ul>.main_menu:hover span{
+	top:50px;
+  	background:#ffcc00;
+ 	opacity:1;
+}
+nav>ul>.main_menu>a:hover{color:#ffcc00;}
+nav>ul>.main_menu:hover .over_menu{background:#eaeaea;}
+
+
+/*오버시 나오는 서브메뉴*/
+.over_menu{
+    height:220px;
+    background:#fff;
+    border-bottom:3px solid #ffcc00;
+	  transition:all 0.5s;
+}
+.over_menu li{
+    height:25px;
+    line-height:35px;
+	  text-align:center;
+}
+.over_menu li a{color:#666;}
+.over_menu li a:hover{
+    color:#000;
+    font-weight:bold;
+}
+
+
+/*검색바*/
+
+.search{float:right;}
+.search .search_put{
+	width:100px;
+	height:20px;
+	background:url(../image/search_btn.gif) no-repeat right center #fff;
+	border-style:none;
+}
+
+
+
+/*=========== Section ===========*/
+
+section{
+	width:1000px;
+	margin:40px auto;
+	/*background:pink;*/
+}
+
+/* ///// 왼쪽서브메뉴 */
+
+#sidebar{
+	float:left;
+	width:170px;
+	background:#fff;
+	padding:30px;
+	box-sizing:border-box;
+}
+.lnb{margin-top:30px;}
+.lnb li{
+	position:relative;
+	width:110px;
+	height:35px;
+	/*background:pink;*/
+}
+.lnb li a{
+	display:block;
+	font-size:13px;
+	color:#333;
+	font-weight:600;
+}
+.lnb li span{
+	display:block;
+	position:absolute;
+	top:20px;
+	left:0;
+	width:0;
+	height:3px;
+	opacity:0;
+	transition:all 0.4s;
+}
+
+.lnb li:hover span{ /*각 서브메뉴 아래가로선*/
+	width:110px;
+	background:#05a852;
+	opacity:1;
+}
+.lnb li.on span{   /*현재위치 활성화*/
+    position:absolute;
+    top:20px;
+    left:0;
+    display:block;
+    width:110px;
+    height:3px;
+    background:#05a852;
+    opacity:1;
+}
+.lnb li.on a{color:#05a852;}
+
+
+
+/* ///// 오른쪽 콘텐츠 */
+
+#contents_sub{
+	float:right;
+	width:800px;
+	background:#fff;
+	padding:50px;
+	box-sizing:border-box;
+}
+
+#contents_sub .location{float:right;}
+#contents_sub .location span{color:#999;}
+
+#contents_sub h3{
+	margin:30px 0;
+	font-size:28px;
+	font-weight:bold;
+	color:#504d4d;
+}
+#contents_sub h4{
+	margin-bottom:80px;
+	font-size:20px;
+	font-weight:bold;
+	color:#999;
+	font-weight:normal;
+}
+#contents_sub h4 span{
+	font-weight:bold;
+	color:#666;
+}
+#contents_sub .contents{
+	color:#666;
+	font-size:13px;
+	line-height:26px;
+	font-weight:100;
+	font-family:맑은고딕;
+	padding-bottom:50px;
+}
+#contents_sub .contents h5{
+	font-size:15px;
+	color:#333;
+	margin-bottom:20px;
+}
+.contents .img_01{
+	float:left;
+	margin:0 30px 30px 0;
+}
+
+/*=========== Footer ===========*/
+.footer_in{
+  width:100%;
+  height: 100px;
+  background: #fff;
+}
+.f_logo{
+  float: left;
+  padding:40px 0px 40px 200px;
+}
+.f_copy{
+  float:right;
+  padding:40px 200px 40px 0px;
+}
+.f_copy p{
+  color:gray;
+  font-weight: bold;
+}
+
+.info a{
+  display:inline-block;
+  padding-left:10px;
+  font-style: normal;
+  color:gray;
+  font-weight: bold;
+}
