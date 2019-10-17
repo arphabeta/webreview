@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>5-비교연산자</title>
+    <script>
+      var a=10;
+      var b=20;
+      var c=10;
+      var f="20"; //변수 f의 값->문자형"20"
+      var result;
+
+      result=a>b; //거짓(10>20)
+      document.write(result,"<br>");
+
+      result=a<b; //참(10<20)
+      document.write(result,"<br>");
+
+      result=a<=b; //참(10<=20)
+      document.write(result,"<br>");
+
+      result=b==f; //참(데이터형 상관없이 데이터가 같으므로 참->20=20)
+      document.write(result,"<br>");
+
+      result=b===f; //거짓(데이터형이 일치하지 않으므로 거짓->숫자20=문자20)
+      document.write(result,"<br>");
+
+      result=a!=b; //참(10과 20은 다르다)
+      document.write(result,"<br>");
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

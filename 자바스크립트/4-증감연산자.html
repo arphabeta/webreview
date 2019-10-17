@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>4-증감연산자</title>
+    <script>
+      var num1=10;
+      var num2=20;
+
+      num1--; //변수num1(10)에서 1이 감소->9
+      document.write(num1,"<br>");
+
+      num1++;  //변수num1이 현재(9)에서 1이 증가->10
+      document.write(num1,"<br>");
+
+      result=num2++; //20을 먼저 대입한 후 값을 증가한다. ->
+                    //대입한 다음 증가이기 때문에 result="20"
+      document.write(result,"<br>");
+
+      result=++num2; /*대임한 후 증가했기때문에 num2는 21이 된 상태.
+                      그래서 21이 된 num2에 1이 더해져 22로 출력된다.*/
+      document.write(result,"<br>");
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
