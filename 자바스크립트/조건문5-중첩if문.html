@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>조건문5-중첩if문</title>
+    <script>
+      var id="easy1004"; //아이디
+      var pw="112233"; //비밀번호
+
+      var user_id=prompt("아이디는?","");
+      var user_pw=prompt("비밀번호는?","");
+
+      if(id==user_id){ //아이디가 일치했을 경우
+        if(pw==user_pw){ //비밀번호가 일치했을 경우
+          document.write(user_id+"님 반갑습니다!");
+        }else{ // 비밀번호가 일치하지 않을 경우
+          alert("비밀번호가 일치하지 않습니다.");
+        }
+      }else{ //아이디가 일치하지 않을 경우
+        alert("아이디가 일치하지 않습니다.");
+      }
+
+      /*일단 아이디가 틀려도 비밀번호는 물어봄*/
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
+<!--
+*중첩if문 : 바깥쪽에 있는 조건문인 조건식1을 만족해야만 안쪽에 있는 조건문인 조건식2를 검사한다.
+만일 안쪽 if문의 조건식2를 만족하지 않는다면 바깥쪽 조건문인 조건식1의 실행문만 실행하고 종료된다.
+
+if(조건식1){
+  if(조건식2){
+    실행문;
+  }
+}
+
+-->

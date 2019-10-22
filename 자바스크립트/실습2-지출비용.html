@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>실습2-지출비용</title>
+    <script>
+    /*문제 : 진영이의 하루지출내역은
+    교통비 3000원, 식비 6000원, 음료비 3000원입니다.
+    삼항조건연산자를 사용하여 하루 적정 지출비용인 1만원을 초과했을 경우
+    "000원 초과"라고 출력되고, 아니라면 "돈관리 잘 했어요!"라고
+    출력되도록 해주세요.*/
+
+    var a=3000;
+    var b=6000;
+    var c=3000;
+    var total=a+b+c;
+
+    var result=total>10000 ? total-10000+"원 초과" : "돈관리 잘 했어요!";
+
+    document.write(result);
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

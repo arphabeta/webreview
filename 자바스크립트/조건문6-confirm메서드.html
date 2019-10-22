@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>조건문6-confirm메서드</title>
+    <script>
+      /*[확인] 버튼을 누르면 변수 result에 true가 저장
+      [취소] 버튼을 누르면 변수 result에 false가 저장*/
+
+      var result=confirm("정말로 회원을 탈퇴하시겠습니까?");
+
+      if(result){ //[확인] 버튼을누르면->true
+        document.write("탈퇴 처리되었습니다!");
+      }else{ //[취소]버튼을 누르면->false
+        document.write("탈퇴 취소되었습니다!");
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
+<!-- 창과 관련된 : prompt, alert, confirm -->

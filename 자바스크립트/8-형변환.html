@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>8-형변환</title>
+    <script>
+      /*
+      *암시적형변환 : 자바스크립트에 의해 자동으로 형변환이 일어나는 것
+
+      숫자형+문자형 = 문자형
+      불린형+문자형 = 문자형
+      불린형+숫자형 = 숫자형
+
+      *명시적형변환 : 개발자가 직접 스크립트를 이용해서 어떤 형으로 바꿀지 명시해주는 것
+      */
+
+
+      /*숫자를 문자로 형변환*/
+
+        //풀이1 : 암시적 형변환을 이용한 방법
+        var test1 = 100; //숫자
+        var result1 = test1 + ""; //문자
+        document.write(" result1 = " + result1, "<br>"); //실제로 출력되는건 100이지만 문자로 출력된것
+
+
+        //풀이2 : String()을 이용한 방법
+        var test2 = 100;
+        var result2 = String(test2); //숫자100을 문자로 변환
+        document.write(" result2 = " + result2, "<br>");
+
+        //풀이3 : toString()을 이용한 방법
+        var test3 = 100;
+        var result3 = test3.toString(); //숫자100을 문자로 변환
+        document.write(" result3 = " + result1+result3, "<br>"); //문자끼리 결합이라 200이 아닌 100100이 나온다.
+
+
+      /*문자를 숫자로 형변환*/
+        var test4 = "100.50"; //문자
+        var result4 = test4+150+"20";
+        document.write(" result4 = " + result4, "<br>");
+
+
+        var test5 = "100.50"; //문자
+        var result5 = parseFloat(test5) + 150 + parseInt("20"); // 다 숫자가 됨
+        //100.50+150+20=270.5
+        document.write(" result5 = " + result5, "<br>");
+        /*parseFloat()->정수형 / parseInt->실수형*/
+
+
+        var test6 = "100.50"; //문자
+        var result6 = Number(test6) + 150 + Number("20");
+        //100.50+150+20=270.5
+        document.write(" result6 = " + result6, "<br>");
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
