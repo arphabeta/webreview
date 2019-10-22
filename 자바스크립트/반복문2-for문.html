@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>반복문2-for문</title>
+    <script>
+      //변수 i가 100이 될 때까지 반복 실행
+      for(var i=1; i<=100; i++){
+
+        if(i%7!=0 && i%5==0){ //5의 배수이고 7의 배수가 아닌 경우
+          document.write("<h4 style='color:red'>"+i+"</h4>");
+        }else if(i%7==0 && i%5!=0){ //7의 배수이고 5의 배수가 아닌 경우
+          document.write("<h4 style='color:green'>"+i+"</h4>");
+        }else if(i%7==0 && i%5==0){ //7의 배수이고 5의 배수인 경우
+          document.write("<h4 style='color:aqua'>"+i+"</h4>");
+        }
+
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
+
+<!--
+*for문: 조건식을 만족할때까지 특정 실행문을 반복하여 실행한다.
+
+for(초기값;조건식;증감식){
+  실행문;
+}
+
+-->
