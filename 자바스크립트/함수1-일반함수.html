@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>함수1-일반함수</title>
+    <script>
+      var i=0;
+
+      function myFnc(){ //myFnc 함수 정의문
+        i++;
+        document.write("hello"+i,"<br>");
+      }
+
+      myFnc(); //myFnc 함수 호출
+
+
+      var theFnc=function(){
+        i++;
+        document.write("bye"+i,"<br>");
+      }
+
+      theFnc(); //변수 theFnc 에 참조된 함수를 호출
+      //bye2가 출력된다. 이전식에서 1이 플러스 됐으므로
+
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
+<!--
+형식1)
+function 함수명(){
+  실행문;
+}
+
+형식2)
+참조변수 =function(){
+  실행문;
+}
+
+함수명(); -> 함수호출
+
+-->

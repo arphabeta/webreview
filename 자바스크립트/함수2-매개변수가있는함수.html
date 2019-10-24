@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>함수2-매개변수가있는함수</title>
+    <script>
+      function myFnc(name,area){
+        document.write("안녕하세요. "+name+"입니다.","<br>");
+        document.write("사는곳은 "+area+"입니다.","<br><br>");
+      }
+
+      //"홍길동"은 name에 "서울"은 area에 전달합니다.
+      myFnc("홍길동","서울");
+
+      //"김부자"은 name에 "부산"은 area에 전달합니다.
+      myFnc("김부자","부산");
+
+      function sum(num1,num2){
+        var result=num1+num2;
+        alert("두 수의 합은 = "+result);
+      }
+
+      sum(10,20);
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
+<!--
+매개변수란?
+함수 외부에서 함수 내부로 데이터를 전달하기 위한 용도로 사용하는 변수
+-->
