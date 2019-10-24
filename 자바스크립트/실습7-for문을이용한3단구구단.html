@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>실습7-for문을이용한3단구구단</title>
+    <script>
+
+
+    //방법 1
+    /*
+    var dan=3;
+    document.write(dan+"*1="+(dan*1)+"<br>");
+    document.write(dan+"*2="+(dan*2)+"<br>");
+    document.write(dan+"*3="+(dan*3)+"<br>");
+    document.write(dan+"*4="+(dan*4)+"<br>");
+    document.write(dan+"*5="+(dan*5)+"<br>");
+    document.write(dan+"*6="+(dan*6)+"<br>");
+    document.write(dan+"*7="+(dan*7)+"<br>");
+    document.write(dan+"*8="+(dan*8)+"<br>");
+    document.write(dan+"*9="+(dan*9)+"<br>");
+    */
+
+    //방법2
+    var dan=3;
+    document.write("<h1>"+dan+"단</h1>");
+
+    for(i=1;i<=9;i++){
+      document.write(dan+"*"+i+"="+(dan*i)+
+      "<br>");
+    }
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
+
+<!--
+for(초기값;조건식;증감식){
+  실행문;
+}
+-->

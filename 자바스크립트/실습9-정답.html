@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>실습9-현재연도와월에해당하는전체일자출력</title>
+<script>
+/*문제:
+1)현재연도와 월을 입력받는다.
+2)switc문을 이용해서 현재 월이 몇일까지인지....
+3)for문을 이용해서 현재 월의 1일부터 마지막일까지 출력
+4)if문을 이용해서 윤달을 계산 ->2월
+-->현재 년도가 4년주기이고 100년 주기는 아닌경우
+또는 400년 주기로 윤년이므로 2월은 29일까지 출력
+*/
+
+	//현재 년도와 월을 입력
+	var year=prompt("현재 몇 년입니까?","0000");
+	var mon=prompt("현재 몇 월입니까?","0");
+	var last_day;
+
+
+	//현재 월이 몇일까지 있는지 선택문을 이용
+	switch(mon){
+		case "1": last_day=31;
+		break;
+		case "2": last_day=28;
+
+		if(year%4==0 && year%100!=0 || year%400==0){
+			last_day=29;
+		}
+
+		break;
+		case "3": last_day=31;
+		break;
+		case "4": last_day=30;
+		break;
+		case "5": last_day=31;
+		break;
+		case "6": last_day=30;
+		break;
+		case "7": last_day=31;
+		break;
+		case "8": last_day=31;
+		break;
+		case "9": last_day=30;
+		break;
+		case "10": last_day=31;
+		break;
+		case "11": last_day=30;
+		break;
+		case "12": last_day=31;
+		break;
+
+	}
+
+	document.write("<h1>"+year+"년"+mon+"월"+"</h1><br>");
+
+	/*현재 1일부터 마지막일까지 문서에 출력*/
+	for(var i=1; i<=last_day; i++){
+		document.write(i+" ");
+	}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>실습4-if문을이용한적정몸무게</title>
+    <script>
+      /*
+      문제 : 적정몸무게공식->(키-100)*0.9
+      신장과 키를 입력받아서
+      적정몸무게보다 넘으면 "적정몸무게 이상" 출력
+      적정몸무게보다 적으면 "적정몸무게 미달" 출력
+      */
+
+
+      var user_height=prompt("키는?","0");
+      var user_weight=prompt("몸무게는?","0");
+      var normal_weight=(user_height-100)*0.9;
+
+
+
+      if (user_weight>normal_weight){
+        alert("적정몸무게 이상");
+      }else{
+        alert("적정몸무게 미달");
+      }
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
