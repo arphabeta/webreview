@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>함수6-지역변수와전역변수2</title>
+    <script>
+    var num=200; //전역변수
+
+    function myFnc(){
+      var num=500; //지역변수
+    }
+
+    myFnc(); //함수를 호출 -> num=500을 출력하는 document 식이 없기 때문에 아무것도 출력안됨.
+
+    document.write(num,"<br>");
+
+
+    document.write("<hr>");
+    /*-----------------------------------------*/
+
+    var name="test1"; //전역변수
+    function func1(){
+      var name="test2"; //지역변수
+      document.write("2. name = "+name,"<br>");
+    }
+    function func2(){
+      var name="test3"; //지역변수
+      document.write("3. name = "+name,"<br>");
+    }
+    function func3(){
+      name="test20"; //전역변수
+      document.write("4. name = "+name,"<br>");
+    }
+
+    document.write("1. name = "+name,"<br>"); //전역변수 출력:name=test1
+    func1(); //출력:name = test2
+    func2(); //출력:name = test3
+    func3(); //출력:name = test20 ->전역변수가 1에서 20으로 바뀌었음.
+    document.write("5.name = "+name,"<br>");
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

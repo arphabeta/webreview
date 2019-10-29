@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>함수4-반복문을함수로만들기</title>
+    <script>
+    /*문제 : "웹동네", "짱아", "딴동네" 이름을 다섯번씩 출력해주세요*/
+
+    //일반적인 방법
+    document.write("1.웹동네 <br>");
+    document.write("1.웹동네 <br>");
+    document.write("1.웹동네 <br>");
+    document.write("1.웹동네 <br>");
+    document.write("1.웹동네 <br>");
+
+    document.write("1.짱아 <br>");
+    document.write("2.짱아 <br>");
+    document.write("3.짱아 <br>");
+    document.write("4.짱아 <br>");
+    document.write("5.짱아 <br>");
+
+    document.write("1.딴동네 <br>");
+    document.write("2.딴동네 <br>");
+    document.write("3.딴동네 <br>");
+    document.write("4.딴동네 <br>");
+    document.write("5.딴동네 <br>");
+
+    document.write("<hr>");
+
+
+    //반복문을 활용한 방법
+    for(var i=1; i<=5; i++){
+      document.write(i+".웹동네 <br>");
+    }
+    for(var i=1; i<=5; i++){
+      document.write(i+".짱아 <br>");
+    }
+    for(var i=1; i<=5; i++){
+      document.write(i+".딴동네 <br>");
+    }
+
+    document.write("<hr>");
+    //매개변수가 있는 함수를 활용한 방법-> 웹동네 5번, 짱아 10번, 딴동네 7번
+    function showName(name,count){ //showName : 내가 이름 지은거, name&count : 내가 정한 변수
+      for(var i=1; i<=count; i++){
+        document.write(i+"."+name+"<br>");
+      }
+
+    }
+
+    showName("웹동네",5);
+    showName("짱아",10);
+    showName("딴동네",7);
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

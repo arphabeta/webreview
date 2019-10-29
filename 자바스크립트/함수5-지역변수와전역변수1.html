@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>함수5-지역변수와전역변수1</title>
+    <script>
+      var name2="function2"; //전역변수
+
+      function func1(){
+        var name="function"; //지역변수
+        name3="function3"; //전역변수:함수내에 있지만 var이 없으면 전역변수
+        document.write("1. name = "+name+"<br>");
+      }
+
+      func1();
+
+      //name은 지역변수이기 때문에 함수밖인 전역에서 사용할 수 없음.
+      document.write("2. name = "+name+"<br>"); //2. name =만 뜨는게 맞음.
+
+      //name2는 전역변수이기 때문에 전역에서 사용할 수 있음
+      document.write("3. name = "+name2+"<br>");
+
+      //name3는 전역변수이기 때문에 전역에서 사용할 수 있음
+      document.write("4. name = "+name3+"<br>");
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
+<!--
+
+-->

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>함수7-지역변수와전역변수3</title>
+    <script>
+    var a=10; //전역변수
+    var b=100; //전역변수
+
+    function func1(){
+      var b=20; //지역변수
+      document.write("1. a = "+a+"<br>");
+      document.write("2. b = "+b+"<br>");
+      a=50; //전역변수
+    }
+
+    func1();
+
+    document.write("3. a = "+a+"<br>"); //전역변수 a=50으로 바뀌어서 출력됨.
+    document.write("4. b = "+b+"<br>"); //전역변수 b=100이 출력됨.
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
