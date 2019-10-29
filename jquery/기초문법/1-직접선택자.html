@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>1-직접선택자</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+      /*$("h1").css("background","orange").css("border","2px solid green"); */ //css를 쓸 수 있는 메소드르 불러온 것. / = h1{background:orange;border:2px solid green}
+      $("h1").css({"background":"orange","border":"2px solid green"}); //중괄호로 css를 여러개 쓸수 있음
+
+      $("h3").css("background","pink");
+
+      $("h2").css("background","yellow");
+
+      $("#tit").css({"background":"pink","border":"2px solid red"});
+
+      $(".tt1 li").css("color","red"); //후손선택자
+
+      $(".tt2 #first").css({"background":"yellow","border":"2px solid red", "color":"red"}); //후손선택자
+
+      $(".tt3 .second1").css("color","red"); //후손선택자
+
+      $(".tt4 .first2 strong").css("color","red"); //후손선택자
+
+      $(".tt5 li *").css("color","red"); //li * ->li 태그안에 포함되어 있는 모든 태그
+
+      $(".tt6 #first3,#third3").css("color","red");
+  });
+
+    </script>
+  </head>
+  <body>
+  <h1>제이쿼리</h1>
+  <h2>직접 선택자 및 관계 선택자</h2>
+  <h3>직접 선택자</h3>
+  <h3>관계 선택자</h3>
+
+  <h1>제이쿼리</h1>
+  <h2 id="tit">직접 선택자 및 관계 선택자</h2>
+  <h3 class="direct">직접 선택자</h3>
+  <h3>관계 선택자</h3>
+
+  <ul class="tt1">
+    <li> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+  </ul>
+
+  <ul class="tt2">
+    <li id="first"> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li id="second"> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li id="third"> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li id="fourth"> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+  </ul>
+
+  <ul class="tt3">
+    <li class="first1"> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li class="second1"> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li class="third1"> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li class="fourth1"> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+  </ul>
+
+  <ul class="tt4">
+    <li class="first2"> <strong>텍스트</strong> 텍스트 텍스트 텍스트 텍스트</li>
+    <li class="second2"> <strong>텍스트</strong> 텍스트 텍스트 텍스트 텍스트</li>
+    <li class="third2"> <strong>텍스트</strong> 텍스트 텍스트 텍스트 텍스트</li>
+    <li class="fourth2"> <strong>텍스트</strong> 텍스트 텍스트 텍스트 텍스트</li>
+  </ul>
+
+  <ul class="tt5">
+    <li> <strong>텍스트</strong> 텍스트 텍스트 텍스트 텍스트</li>
+    <li> <em>텍스트</em> 텍스트 텍스트 텍스트 텍스트</li>
+    <li> <span>텍스트</span> 텍스트 텍스트 텍스트 텍스트</li>
+    <li> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+  </ul>
+
+  <ul class="tt6">
+    <li id="first3"> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li id="second3"> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li id="third3"> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+    <li id="fourth3"> 텍스트 텍스트 텍스트 텍스트 텍스트</li>
+  </ul>
+
+  </body>
+</html>
+
+
+<!--
+css({"color":"#ee1a28"}) : 명령어의 복수사용이 가능함.
+
+예) css({"color":"#ee1a28","font-weifht":"bold"});
+
+css("color","#ee1a28") : 명령어의 복수사용이 불가능함.
+
+예) css({"color","#ee1a28","font-weifht","bold"}); -> 사용 불가!!
+
+-->

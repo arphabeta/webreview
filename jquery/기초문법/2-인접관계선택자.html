@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>2-인접관계선택자</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+      $(".second").parent().css("border","1px solid red"); //.second의 부모전체에 css 문법 적용
+      //class가 "second"인 요소의 부모요소에 적용
+
+      $("#wrap li").css("border","1px solid blue");
+      //id가 "wrap"인 요소의 하위<li>태그에만 적용
+
+      $("#wrap1>li").css("border","2px solid green");
+      //id가 "wrap1"인 요소의 자식요소인<li>태그에만 적용
+
+      $("#wrap1").children().css("background","#ccc");
+      //id가 "wrap1"의 모든 자식 요소에 적용
+
+      $("#second2").prev().css("border","1px solid red");
+      //id가 "second2"인 요소의 이전요소에 적용
+
+      $("#second3").next().css("border","1px solid green");
+      //id가 "second3"인 요소의 다음요소에 적용
+    });
+    </script>
+  </head>
+  <body>
+    <h1>인접 관계 선택자</h1>
+    <ul>
+      <li>내용1
+        <ul>
+          <li>내용2</li>
+          <li class="second">내용3</li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul id="wrap">
+      <li>내용1
+        <ul>
+          <li>내용2</li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul id="wrap1">
+      <li>내용1
+        <ul>
+          <li>내용2</li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul>
+      <li>내용 1</li>
+      <li id="second2">내용 2</li>
+      <li>내용 3</li>
+    </ul>
+
+    <ul>
+      <li>내용 1</li>
+      <li id="second3">내용 2</li>
+      <li>내용 3</li>
+    </ul>
+
+  </body>
+</html>
