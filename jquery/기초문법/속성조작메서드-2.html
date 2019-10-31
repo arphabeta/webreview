@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>속성조작메서드-2</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+      $("h2").text("텍스트 메서드");
+      //<h2>태그의 텍스트를 새 텍스트로 바꾼다.
+
+      alert($("h1").text());
+      //<h1>태그의 텍스트를 가져온다.
+
+      $("p").text($("h3").css("color"));
+      //<h3>태그의 스타일에 "color"속성값을 불러옴.
+
+      $("h4").css("color","red");
+      //<h4>태그의 글자색을 빨강으로 적용
+    })
+    </script>
+  </head>
+  <body>
+    <h1>객체 조작 및 생성</h1>
+    <h2>text()</h2>
+
+    <h3 style="color:blue">객체 조작 및 생성</h3>
+    <p></p>
+    <h4>CSS 메서드</h4>
+
+  </body>
+</html>
+<!--
+text()메서드 : 선택한 요소내에 텍스트를 불러오거나 텍스트를 바꿀 때 사용함.
+
+$("요소선택").text(); ->비어있으면 불러오는거
+$("요소선택").text("새텍스트"); ->채워져있으면 바꾸는 것
+
+-->
