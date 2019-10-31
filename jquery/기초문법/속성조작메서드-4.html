@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>속성조작메서드4</title>
+    <style media="screen">
+      .aqua{background-color:aqua;}
+      .red{background-color:red;}
+      .green{background-color:green;}
+      .yellow{background-color:yellow;}
+    </style>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        //id="p1"인 요소에 class="aqua"속성을 생성
+        $("#p1").addClass("aqua");
+
+        //id="p2"인 요소에 class="red"속성을 제거
+        $("#p2").removeClass("red");
+
+        //id="p3"인 요소의 class 속성값에 "green"이 있으면 제거하고, 없으면 생성한다.
+        $("#p3").toggleClass("green");
+
+        $("#p4").toggleClass("green");
+
+        $("#p6").text($("#p5").hasClass("yellow"));
+
+        //*id="p5"인 요소에 class="yellow"속성을 포함하면 true를 반환하고
+        //포함하지 않으면 false를 변환하여 id="p6"에 텍스트로 출력
+
+      })
+
+    </script>
+  </head>
+  <body>
+
+    <p id="p1">내용1</p>
+    <p id="p2" class="red">내용2</p>
+    <p id="p3" class="green">내용3</p>
+    <p id="p4">내용4</p>
+    <p id="p5" class="yellow">내용5</p>
+    <p id="p6"></p>
+
+  </body>
+</html>
+<!--
+
+*addClass("클래스값");
+->선택한 요소에 지정한 클래스를 생성 또는 추가한다.
+
+*removeClass("클래스값");
+->선택한 요소에 지정한 클래스를 삭제한다.
+
+*toggleClass("클래스값");
+->선택한 요소에 지정한 클래스 값을 생성, 삭제를 반복한다.
+
+*hasClass("클래스값");
+->선택한 요소에 지정한 클래스 값이 포함되어 있는지 검사한다.
+있을 경우에는 true, 없으면 false를 반환한다.
+
+-->

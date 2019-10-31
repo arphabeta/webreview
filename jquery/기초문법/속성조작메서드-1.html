@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>속성조작메서드-1</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+      $("h2").html("<a href='#'>HTML 메서드</a>");
+      //<h2> 태그에 하위요소를 제거하고 새 요소를 생성한다.
+
+      alert($("h1").html());
+      //<h1> 태그에 모든 하위요소를 문자열로 가져온다.
+    })
+    </script>
+  </head>
+  <body>
+  <h1><strong>객체 조작 및 생성</strong></h1>
+  <h2><em>html()</em></h2>
+  </body>
+</html>
+
+
+<!--
+
+html()메서드 : 선택한 요소에 포함되어 있는 하위 요소를 불러오거나
+하위요소를 새요소로 바꿀때 사용함.
+
+$("요소선택").html(); ->비어있으면 불러오는거
+$("요소선택").html("새요소"); ->채워져있으면 바꾸는 것
+
+-->

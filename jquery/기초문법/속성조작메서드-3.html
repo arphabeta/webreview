@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        //id="wrap"인 요소의 하위<img>태그에 "src"속성값을 불러와 id="txt"요소에 텍스트로출력
+        $("#txt").text($("#wrap img").attr("src"));
+
+        //id="wrap"인 요소의 하위<img>태그에 "width"속성값을 200으로 적용
+        $("#wrap img").attr("width","200px");
+
+        //id="box"인 요소의 하위<img>태그에 "border"속성을 제거
+        $("#box img").removeAttr("border");
+
+      })
+
+    </script>
+  </head>
+  <body>
+    <h1>객체 조작 및 생성</h1>
+    <p id="wrap">
+      <img src="image/math_img_1.jpg" alt="가위" width="100px">
+    </p>
+    <p id="txt"> </p>
+    <p id="box">
+      <img src="image/math_img_3.jpg" alt="보" width="100px" border="2px">
+    </p>
+  </body>
+</html>
+<!--
+
+*attr()메서드 : 선택한 요소에 속성값을 반환 또는 변환한다.
+
+$("요소선택").attr("href"); ->비어있으면 불러오는거
+$("요소선택").attr("href","main.html"); ->채워져있으면 바꾸는 것
+
+*removeAttr()메서드 : 선택한 요소의 지정한 속성을 삭제한다.
+
+$("요소선택").removeAttr("title");
+
+-->
