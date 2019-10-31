@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>event1-마우스이벤트</title>
+    <style media="screen">
+
+    </style>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        //event1
+        $(".event1 ul li a").click(function(){
+          $(".event1 img").attr("src",$(this).attr("href"));
+            //attr의 역할 :  바꾸는거            불러오는거
+            //$(this)-> .event1 ul li a
+          return false; //<a>태그에 링크 기능을 차단시킴. 아예 실행 x
+        });
+
+        //event11
+        $(".event11 #btn1").click(function(){ //btn1 버튼을 누르면
+          $(".event11 p").css("background-color","purple");
+
+          return false;//<a>태그에 링크 기능을 차단시킴. 아예 실행 x
+        });
+
+        $(".event11 #btn2").click(function(){
+          $(".event11 p").css("background-color","yellow");
+          event.preventDefault();
+          //기본기능(default)이 있는 태그에 대해서 기능을 하지 못하게 막음
+        });
+
+        $(".event11 #btn3").click(function(){
+          $(".event11 p").css("background-color","aqua");
+          return false;
+        });
+
+
+        //event2
+        $(".event2 img").hover(function(){
+          $(this).attr("src","image/sea.jpg");
+        },function(){
+          $(this).attr("src","image/flower.jpg");
+        });
+
+      });
+    </script>
+  </head>
+  <body>
+
+    <h1>click()이벤트</h1>
+    <div class="event1">
+      <ul>
+        <li><a href="image/flower.jpg" alt="꽃">꽃</a></li>
+        <li><a href="image/sea.jpg" alt="바다">바다</a></li>
+        <li><a href="image/fish.jpg" alt="해파리">해파리</a></li>
+        <li><a href="image/building.jpg" alt="건물">건물</a></li>
+      </ul>
+      <br>
+      <img src="image/flower.jpg" alt="꽃">
+    </div>
+
+    <div class="event11">
+      <a href="http://w3.org/" id="btn1">버튼1</a><br><br>
+      <a href="http://w3.org/" id="btn2">버튼1</a><br><br>
+      <a href="http://w3.org/" id="btn3">버튼1</a><br><br>
+      <p>내용</p>
+    </div>
+
+    <h1>hover()이벤트(mouseenter+mouseleave)</h1>
+    <div class="event2">
+      <img src="image/flower.jpg" alt="꽃">
+    </div>
+
+  </body>
+</html>
+<!--
+*hover 구문알아보기
+
+$("선택자").hover(function(){
+  마우스를 올렸을 때의 명령문;
+},function(){
+  마우스를 뗐을 때의 명령문
+});
+-->
