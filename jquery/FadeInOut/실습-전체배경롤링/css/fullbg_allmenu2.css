@@ -1,0 +1,117 @@
+@import url(common.css);
+
+
+/*TOP*/
+
+.top{
+    position:fixed;
+	width:100%;
+    height:60px;
+	background:rgba(255,255,255,0.7);
+    z-index:1000;
+}
+.top h1{margin:10px 0 0 90px;} /*logo*/
+.top img{width:170px;}
+
+
+/* ////// 메인비주얼(FullScreen) ////// */
+
+.mainvisual{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+
+.mainvisual .visual_image li{
+    opacity:0;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:no-repeat fixed center center;
+    background-size:cover;
+    transform:scale(1.2);
+    transition:all 1.5s;
+}
+.mainvisual .visual_image li.imgVisible{ /*현재위치활성화->제이쿼리*/
+    opacity:1;
+    transform:scale(1);
+    transition:all 2s;     
+}
+
+/* 비주얼이미지배경 */
+.mainvisual .visual_image li.main0{background-image:url(../image/mvisual_01.jpg);}
+.mainvisual .visual_image li.main1{background-image:url(../image/mvisual_02.jpg);}
+.mainvisual .visual_image li.main2{background-image:url(../image/mvisual_03.jpg);}
+.mainvisual .visual_image li.main3{background-image:url(../image/mvisual_04.jpg);}
+
+
+/*버튼*/
+.mainvisual .btn{
+    position:absolute;
+    top:130px;
+    left:100px;
+}
+.mainvisual .btn>span{
+    display:inline-block;
+    width:11px;
+    height:11px;
+    margin-right:3px;
+    border-radius:50%;
+    background:#d5d5d6;
+    cursor:pointer;
+}
+.mainvisual .btn>span.active{
+    display:inline-block;
+    width:45px;
+    height:11px;
+    border-radius:10px;
+    background:#ffff00;
+}
+
+
+/*비주얼 텍스트 공통*/
+
+.mainvisual .Vtext{
+    opacity:0;
+    position:absolute;
+    z-index:20;
+    top:30%;
+    width:100%;
+    color:#fff;
+    text-align:center;
+    transform:translateY(20%);
+    transition:all 1s;
+}
+.mainvisual .Vtext .black1{color:#575757;}
+.mainvisual .Vtext .black2{color:#000;text-shadow:none;}
+
+.mainvisual .Vtext.textVisible{ /*현재위치활성화->제이쿼리*/
+    opacity:1;
+    transform:translateY(0);
+    transition:all 2s;
+}
+
+.mainvisual .Vtext h3 {
+    margin-bottom:30px;
+    font-family:'Nanum Myeongjo', serif;
+    font-weight:700;
+    font-size:60px;
+    letter-spacing:20px;
+}
+
+.mainvisual .Vtext p {
+    font-weight:100;
+    font-size:16px;
+    line-height:30px;
+    text-shadow:0 0 10px #000;
+} 
+
+
+
+
+
+

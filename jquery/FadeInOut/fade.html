@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>이미지자동전환+하단버튼+좌우버튼+playstop버튼</title>
+<link rel="stylesheet" href="css/fade.css">
+</head>
+<body>
+<div class="fadeShow">
+  <!-- 바뀌는 이미지 -->
+  <div class="changeImg">
+    <ul>
+      <li><a href="#"><img src="image/img1.jpg" alt="image1"></a></li>
+      <li><a href="#"><img src="image/img2.jpg" alt="image2"></a></li>
+      <li><a href="#"><img src="image/img3.jpg" alt="image3"></a></li>
+      <li><a href="#"><img src="image/img4.jpg" alt="image4"></a></li>
+      <li><a href="#"><img src="image/img5.jpg" alt="image5"></a></li>
+    </ul>
+  </div>
+
+  <!-- 하단버튼 -->
+  <div class="btn">
+    <span class="active"><span class="indent">01</span></span>
+    <span><span class="indent">02</span></span>
+    <span><span class="indent">03</span></span>
+    <span><span class="indent">04</span></span>
+    <span><span class="indent">05</span></span>
+    <p class="playbt"></p> <!-- play / stop 버튼 -->
+  </div>
+
+  <!-- 좌우버튼 -->
+  <div class="side_btn">
+    <a class="lbtn" href="#"><span class="indent">이전보기</span></a>
+    <a class="rbtn" href="#"><span class="indent">다음보기</span></a>
+  </div>
+</div>
+
+<!-- Script Source -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="js/fade.js"></script>
+</body>
+</html>
