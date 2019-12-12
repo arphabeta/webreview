@@ -1,0 +1,42 @@
+@import url(common.css);
+
+body{background: #999;}
+
+#gallery{ /*갤러리 박스 설정*/
+  width: 1000px;
+  height: 350px;
+  margin:50px auto 0;
+  padding:20px 20px 70px;
+  border:solid 1px #ccc;
+  background: #eee;
+  box-shadow: 0 0 30px #333;
+  position: relative;
+  overflow: hidden; /*부모영역넘어간 자식 숨김*/
+}
+
+.largeImg{
+  position: absolute;
+  width: 4080px; /*전체총길이(1000*4 + 여백20px)*/
+}
+
+.largeImg img{
+  float: left;
+  margin-right: 20px;
+}
+
+.thumbs{
+  position: absolute;
+  right:20px;
+  bottom:20px;
+}
+.thumbs a{
+  display: inline-block;
+  padding:5px 10px;
+  border:dotted 1px #888;
+  background:#ccc;
+  color:#666;
+}
+.thumbs a:hover{ /*버튼오버*/
+  background:#333;
+  color:#fff;
+}

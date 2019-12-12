@@ -1,0 +1,101 @@
+@import url(common.css);
+@import url(http://fonts.googleapis.com/css?family=Jacques+Francois);
+@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans);
+
+ /*'Jacques Francois', serif
+ 'Quattrocento Sans', sans-serif*/
+ h1 img{
+   position: relative;;
+   width:200px;
+   height:100px;
+   left:680px;
+   margin:10px;
+ }
+ #photo_view{
+   width: 750px;
+   height: 520px;
+   top:50px;
+   left:400px;
+   background: #fff;
+   position: relative;
+ }
+ #photo_view h2{
+   font-family: 'Jacques Francois', serif;
+   font-size:50px;
+   text-align:center;
+   letter-spacing: 12px;
+   color:#3c4245;
+ }
+ body{background: #979797;}
+
+.photo{
+  width:500px;
+  height:400px;
+  /*background: yellow;*/
+  float: left;
+  margin:5px;
+}
+.right_text{
+  width:200px;
+  height:400px;
+  /*background: green;*/
+  float: left;
+  margin:5px;
+  margin-top:15px;
+}
+
+.largeImg li{
+  display: none;
+  position: absolute;
+  margin:0 auto;
+  top:80px;
+  left:28px;
+}
+.largeImg li img{
+  width:450px;
+  height:350px;
+}
+.largeImg li:first-child{display: block;}
+
+.thumbs{
+  position: absolute;
+  bottom:20px;
+  left:30px;
+}
+.thumbs li{
+  float:left;
+  margin-right: 10px;
+  opacity:0.3;
+}
+.thumbs li:first-child{opacity:1;}
+.thumbs li a img{
+  width:50px;
+  height: 50px;
+}
+
+.right_text{
+  font-family:'Quattrocento Sans', sans-serif;
+  font-size:15px;
+  line-height: 25px;
+  color:#3c4245;
+}
+
+.right_text .btn{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  position: absolute;
+  top:420px;
+  right:50px;
+  color:#fff;
+  font-weight: 900;
+  width:100px;
+  height: 35px;
+  line-height: 35px;
+  background: #e25822;
+  border-radius: 5px;
+}
+.btn:hover{
+  background:#000;
+  cursor: pointer;
+}
