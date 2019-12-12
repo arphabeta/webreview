@@ -1,0 +1,84 @@
+@import url(common.css);
+
+body{background:#eee;}
+
+.gnb{
+	width:100%;
+	height:50px;
+	background:#2b2f3a;
+	text-align:center;		
+}
+
+.gnb h1{  /*로고*/
+	float:left;	
+	margin-right:50px;
+	padding-top:3px;
+}
+
+
+/* ///// 주메뉴 ///// */
+
+.gnb>.gnbMenu{display:inline-block;}
+.gnb>.gnbMenu>li{
+	float:left;
+	width:150px;
+	position:relative;
+}
+.gnb>.gnbMenu>li>a{
+	display:block;
+	color:#7a8189;
+	font-size:15px;
+	font-weight:600;
+	line-height:50px;
+	text-align:center;
+}
+.gnb>.gnbMenu>li:hover>a{color:#fff;}
+
+.gnb>.gnbMenu>li span{  /*삼각형위로*/
+    width:0;
+    height:0;
+    border-left:6px solid transparent;
+    border-right:6px solid transparent;
+    border-bottom:7px solid #fff;
+    position:absolute;
+	top:50px;
+	left:44%;
+	opacity:0;	
+}
+  
+
+
+/* ///// 서브메뉴 ///// */
+
+.gnb>.gnbMenu>li ul{
+	display:none;   /*서브메뉴 감추기*/
+	background:#fff;
+	position:absolute;
+}
+.gnb>.gnbMenu>li ul li{
+	float:left;
+	padding:10px 20px;
+	border-bottom:solid 1px #eee;
+	text-align:center;
+}
+.gnb>.gnbMenu>li ul li:hover{background:#dbe4ea;}
+
+.gnb>.gnbMenu>li ul li a{
+	color:#666;
+	font-size:13px;
+}
+
+/*서브메뉴 가로폭,나오는위치값*/
+.gnbMenu>li>ul.sub1{left:20px;width:421px;}
+.gnbMenu>li>ul.sub2{left:10px;width:474px;}
+.gnbMenu>li>ul.sub3{left:30px;width:295px;}
+.gnbMenu>li>ul.sub4{left:5px;width:250px;}
+.gnbMenu>li>ul.sub5{left:5px;width:191px;}
+
+
+
+
+
+
+
+

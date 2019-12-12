@@ -1,0 +1,58 @@
+@import url(common.css);
+
+a,span{display:block;}
+body{background:#b7e6f6;}
+
+/*========= Top============= */
+.gnb {
+  width:100%;
+  position:relative;
+  background: #deae2c;
+  border-bottom:20px solid #ffce29;
+}
+
+.gnb>ul{
+  width:900px;
+  position: relative;
+  margin:0 auto;
+  /*background: pink;*/
+}
+.gnb>ul>li{
+  width:180px;
+  height: 60px;
+  float:left;
+  /*background: green;*/
+}
+
+.gnb>ul>li>a{ /*하이퍼링크영역*/
+  width: 120px;
+  height: 60px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+  color:#fff;
+  font-weight: 900;
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
+  /*background: pink;*/
+}
+
+.gnb>ul>li>a>p{ /*글자 오버시 둥근사각*/
+  width:80px;
+  height: 30px;
+  margin: 15px 20px;
+  border-radius: 15px;
+  position:relative;
+  z-index: 100;
+  /*->배경색상은 제이쿼리에서*/
+}
+
+.gnb>ul>li>a>span>img{ /*숨겨진 라이언이미지->초기위치(아래로 내림)*/
+  position: absolute;
+  width: 120px;
+  left:0;
+  top:50px;
+}
+
+/*=====탑메뉴====*/

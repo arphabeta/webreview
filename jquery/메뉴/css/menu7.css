@@ -1,0 +1,103 @@
+@import url(common.css);
+
+body{background:#ccc;}
+
+#header{
+	width:100%;
+	height:50px; /*★★★높이를 지정하면 컨텐츠위로 풀다운메뉴나옴
+	높이를 지정하지않으면 컨텐츠가 같이 내려감*/
+	position:relative;  
+	z-index:100;
+}
+.header_in{
+	width:100%;
+	background:#23a4dc;
+	border-bottom:3px solid #0c7fb6;	
+}
+
+
+/* //// 탑메뉴 //// */
+
+.top_nav{
+	width:705px;
+	height:50px;
+	margin:0 auto;
+	position:relative;  
+	z-index:100; 
+	/*밑에 비주얼과 오버시 메뉴가 겹칠때 메뉴가 맨위에 오게 하기위함*/
+}
+
+
+/* 주메뉴 */
+
+.topmenu>li{    
+	float:left;
+	width:175px;
+	height:50px;
+	border-left:1px solid #40b6b9;
+}
+.topmenu>li:last-child{border-right:1px solid #40b6b9;}
+.topmenu>li:hover{
+	background:#058589;
+	border-bottom:3px solid #058589;;
+}
+.topmenu>li>a{
+	display:block;
+	color:#fff;
+	text-align:center;
+	line-height:50px;
+	font-size:16px;
+}
+
+
+
+/* 서브메뉴 */
+
+.topmenu>li>.smenu{
+	display:none;
+	position:absolute;
+	top:108%;
+	height:199px;
+	border:solid #dbdbdb;
+	border-width:0 1px;  
+}
+.smenu li{width:175px;}
+.smenu li a{  
+	display:block;
+	color:#555;
+	font-size:13px;
+	line-height:16px;
+    padding:5px;
+	text-align:center;
+	font-weight:normal;	
+}
+.smenu li a:hover{text-decoration:underline;}
+
+.bg_box{   /*서브배경박스*/
+	display:none;
+	width:100%;
+	height:200px;
+	background:#fff; 
+	border-bottom:3px solid #0c7fb6;
+}
+
+#visual{
+	width:1000px;
+	height:400px;
+	background:pink;
+	margin:0 auto;
+}
+
+#contents{
+	width:1000px;
+	height:500px;
+	background:skyblue;
+	margin:0 auto;
+}
+#footer{
+	width:1000px;
+	height:200px;
+	background:gray;
+	margin:0 auto;
+}
+
