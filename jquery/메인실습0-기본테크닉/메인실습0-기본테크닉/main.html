@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>기본테크닉실습</title>
+<link rel="stylesheet" href="css\ScrollTrigger.css"> <!-- Plug In(2) -->
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header class="page-header">
+    <h1>Creative jQuery Sample</h1>
+</header>
+
+<div class="page-main">
+
+    <div id="typo"><!-- Plug-In(1) -->
+        <div class="inner">Creative jQuery</div>
+    </div>
+
+	<div id="buttons1">
+        <div class="container" data-scroll="toggle(.fromRightIn, .fromRightOut) addHeight">
+          <!--
+          .fromRightIn, .scaleUpOut
+          .fromLeftIn, .fromLeftOut
+          .fromRightIn , .fromRightOut
+          .fromTopIn , .fromTopOut
+          .fromBottomIn , .fromBottomOut
+        -->
+            <h2>BUTTONS1</h2><!-- Plug-In(2) -->
+        </div>
+        <div class="inner clear">
+            <button>Albatross</button>
+            <button>Bishop</button>
+            <button>Canary</button>
+            <button>Duck</button>
+            <button>Eagle</button>
+            <button>Falcon</button>
+            <button>Goose</button>
+            <button>Hawk</button>
+            <button>Ibis<span class="bg"><span>Ibis</span></span></button>
+            <button>Jaeger<span class="bg"><span>Jaeger</span></span></button>
+            <button>Kingfisher<span class="bg"><span>Kingfisher</span></span></button>
+            <button>Lark<span class="bg"><span>Lark</span></span></button>
+        </div>
+    </div>
+
+	<div id="buttons2">
+        <div class="container" data-scroll="toggle(.fromRightIn, .fromRightOut) addHeight">
+			<h2>BUTTONS2</h2><!-- Plug-In(2) -->
+		</div>
+        <div class="inner clear">
+            <button>
+                <span>
+                    <img src="img/01_gr.png">
+                    <img src="img/01_bl.png"><br>
+                    ELEPHANT
+                </span>
+            </button>
+            <button>
+                <span>
+                    <img src="img/02_gr.png">
+                    <img src="img/02_bl.png"><br>
+                    GIRAFFE
+                </span>
+            </button>
+            <button>
+                <span>
+                    <img src="img/03_gr.png">
+                    <img src="img/03_bl.png"><br>
+                    WOLF
+                </span>
+            </button>
+            <button>
+                <span>
+                    <img src="img/04_gr.png">
+                    <img src="img/04_bl.png"><br>
+                    RHINOCEROS
+                </span>
+            </button>
+        </div>
+    </div>
+
+	<div id="images">
+        <div class="container" data-scroll="toggle(.fromRightIn, .fromRightOut) addHeight"
+
+>
+			<h2>IMAGES</h2><!-- Plug-In(2) -->
+		</div>
+        <div class="inner clear">
+            <p><img src="img/01_img.jpg"><strong>Hummingbird</strong><span></span></p>
+            <p><img src="img/02_img.jpg"><strong>Sitta</strong><span></span></p>
+            <p><img src="img/03_img.jpg"><strong>Bee-eater</strong><span></span></p>
+        </div>
+    </div>
+
+	<aside>
+        <ul>
+            <li><a href="#"><img src="img/01_aside.png"></a></li>
+            <li><a href="#"><img src="img/02_aside.png"></a></li>
+            <li><a href="#"><img src="img/03_aside.png"></a></li>
+        </ul>
+        <span class="quick_toggle"><img src="img/btn_open.png"></span>
+    </aside>
+</div>
+
+<footer class="page-footer" role="contentinfo">
+    <small class="copyright">COPYRIGHT &copy; <a href="http://www.shiftbrain.co.jp" target="_blank">SHIFTBRAIN Inc.</a></small>
+</footer>
+
+
+<!-- Script Source -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="js\jquery.typoshadow.js"></script> <!--plug in(1)-->
+<script src="js\ScrollTrigger.min.js"></script> <!--plug in(2)-->
+
+<script src="js/main.js"></script>
+<!-- 순서 : 기본구동파일->다운받은거->내가 만든거 -->
+<!-- Plug-In(2) -->
+
+<script>
+
+window.counter = function() {
+
+    // this refers to the html element with the data-scroll-showCallback tag
+
+    var span = this.querySelector('span');
+
+    var current = parseInt(span.textContent);
+
+
+
+    span.textContent = current + 1;
+
+};
+
+
+
+document.addEventListener('DOMContentLoaded', function(){
+
+  ScrollTrigger.init();
+
+});
+
+</script>​
+
+</body>
+</html>
