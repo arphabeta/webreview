@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>제이쿼리를 활용한 메인페이지실습</title>
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="wrap">
+    <header>
+        <!--슬라이드 플러그인 삽입-->
+        <div class="slider">
+          <div class="bd">
+            <ul>
+              <li><a target="_blank" href="#"><img src="image/slide-1.jpg" alt="img1"></a></li>
+              <li><a target="_blank" href="#"><img src="image/slide-2.jpg" alt="img2"></a></li>
+              <li><a target="_blank" href="#"><img src="image/slide-3.jpg" alt="img3"></a></li>
+              <li><a target="_blank" href="#"><img src="image/slide-4.jpg" alt="img4"></a></li>
+            </ul>
+          </div>
+          <div class="hd">
+            <ul>
+            </ul>
+          </div>
+          <div class="pnBtn prev"> <span class="blackBg"></span> <a class="arrow" href="javascript:void(0)"></a> </div>
+          <div class="pnBtn next"> <span class="blackBg"></span> <a class="arrow" href="javascript:void(0)"></a> </div>
+        </div>
+
+    </header>
+
+    <nav>
+        <div class="nav_in">
+            <h1><a href="#"><img src="image/logo.png" alt="Shiftbrain" height="65px" width="200px"></a></h1>
+            <ul class="topmenu">
+                <li class="m1">
+                    <ul>
+                        <li class="m2"><a href="#">About</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </li>
+                <li class="m1">
+                    <ul>
+                        <li class="m2"><a href="#">Work</a></li>
+                        <li><a href="#">Work</a></li>
+                    </ul>
+                </li>
+                <li class="m1">
+                    <ul>
+                        <li class="m2"><a href="#">Blog</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </li>
+                <li class="m1">
+                    <ul>
+                        <li class="m2"><a href="#">Recruit</a></li>
+                        <li><a href="#">Recruit</a></li>
+                    </ul>
+                </li>
+                <li class="m1">
+                    <ul>
+                        <li class="m2"><a href="#">Contact</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!--스크롤바 내릴때 내려오는 고정탑메뉴-->
+            <div class="nav_fix">
+                <div class="nav_fix_in">
+                    <h1><a href="#"><img src="image/logo-small.png" alt="logo-black"></h1>
+                    <ul class="topmenu_fix">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Work</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Recruit</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="topics-list clear">
+            <ul class="topics-list clearfix">
+                <li>
+                    <a href="#">
+                        <span class="image-wrapper">
+                            <img class="image" src="image/topic-1.jpg" alt="">
+                            <strong>Hot Topic 01</strong><span></span>
+                        </span>
+                        <b class="title">Hot Topic 01</b>
+                        <time class="date" datetime="2019-09-16">2018/09/16</time>
+                        <p class="description">Nullam metus arcu, pharetra eu tempor vel, consectetur nec metus. Praesent malesuada, purus et euismod rutrum, augue nisi facilisis diam, vitae auctor nisl libero nec eros. Vivamus vitae pulvinar augue. Nulla facilisi. Quisque rutrum ante interdum</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="image-wrapper">
+                            <img class="image" src="image/topic-2.jpg" alt="">
+                            <strong>Hot Topic 02</strong><span></span>
+                        </span>
+                        <b class="title">Hot Topic 02</b>
+                        <time class="date" datetime="2018-10-01">2018/10/01</time>
+                        <p class="description">Nullam metus arcu, pharetra eu tempor vel, consectetur nec metus. Praesent malesuada, purus et euismod rutrum, augue nisi facilisis diam, vitae auctor nisl libero nec eros. Vivamus vitae pulvinar augue. Nulla facilisi. Quisque rutrum ante interdum</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="image-wrapper">
+                            <img class="image" src="image/topic-3.jpg" alt="">
+                            <strong>Hot Topic 03</strong><span></span>
+                        </span>
+                        <b class="title">Hot Topic 03</b>
+                        <time class="date" datetime="2018-11-02">2018/11/02</time>
+                        <p class="description">Nullam metus arcu, pharetra eu tempor vel, consectetur nec metus. Praesent malesuada, purus et euismod rutrum, augue nisi facilisis diam, vitae auctor nisl libero nec eros. Vivamus vitae pulvinar augue. Nulla facilisi. Quisque rutrum ante interdum</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="tabmenu">
+            <!--탭메뉴-->
+            <div class="tab-header">
+                <h2 class="work_logo">Pick up work</h2>
+                <ul class="tab">
+                    <li class="tab1"><a href="#tab1" class="active" onclick="return false">Work 01</a></li>
+                    <li class="tab2"><a href="#tab2" onclick="return false">Work 02</a></li>
+                    <li class="tab3"><a href="#tab3" onclick="return false">Work 03</a></li>
+                    <li class="tab4"><a href="#tab4" onclick="return false">Work 04</a></li>
+                    <li class="tab5"><a href="#tab5" onclick="return false">Work 05</a></li>
+                <span class="tab-highlight"></span> <!-- 움직이는 탭메뉴 선택되는 화살표모양박스-->
+                </ul>
+            </div>
+
+<!--
+
+a태그에 가상으로 하이퍼링크를 걸었을때 클릭시 맨위로 올라가는 현상 없애는 방법 : <a href="#">..</a>
+
+(1) <a href="#none">...</a> ->가상 #뒤에 none을 입력해준다.
+(2) <a href="#tab1"> </a> ->가상링크가 아닌 id를 연결한 경우는 a태그에 스크립트를 삽입한다.
+
+예) <a href="#tab1" onclick="return false"></a>
+
+-->
+
+
+            <!--탭메뉴 클릭시 바뀌는 하단내용-->
+            <div class="tab-content">
+                <ul class="panel">
+                    <li id="tab1">
+                        <img src="image/work-1.jpg" alt="work1">
+                        <div class="content">
+                            <h3 class="title">Work 01</h3>
+                            <p class="description">Lorem ipsum Enim do velit exercitation fugiat cillum labore et dolore ad minim dolor amet tempor nisi sunt Excepteur voluptate laborum et Duis labore cupidatat </p>
+                            <span class="read-more"><a href="#">Read more</a></span>
+                        </div>
+                    </li>
+                    <li id="tab2">
+                        <img src="image/work-2.jpg" alt="work2">
+                        <div class="content">
+                            <h3 class="title">Work 02</h3>
+                            <p class="description">Lorem ipsum Enim do velit exercitation fugiat cillum labore et dolore ad minim dolor amet tempor nisi sunt Excepteur voluptate laborum et Duis labore cupidatat </p>
+                            <span class="read-more"><a href="#">Read more</a></span>
+                        </div>
+                    </li>
+                    <li id="tab3">
+                        <img src="image/work-3.jpg" alt="work3">
+                        <div class="content">
+                            <h3 class="title">Work 03</h3>
+                            <p class="description">Lorem ipsum Enim do velit exercitation fugiat cillum labore et dolore ad minim dolor amet tempor nisi sunt Excepteur voluptate laborum et Duis labore cupidatat </p>
+                            <span class="read-more"><a href="#">Read more</a></span>
+                        </div>
+                    </li>
+                    <li id="tab4">
+                        <img src="image/work-4.jpg" alt="work4">
+                        <div class="content">
+                            <h3 class="title">Work 04</h3>
+                            <p class="description">Lorem ipsum Enim do velit exercitation fugiat cillum labore et dolore ad minim dolor amet tempor nisi sunt Excepteur voluptate laborum et Duis labore cupidatat </p>
+                            <span class="read-more"><a href="#">Read more</a></span>
+                        </div>
+                    </li>
+                    <li id="tab5">
+                        <img src="image/work-5.jpg" alt="work5">
+                        <div class="content">
+                            <h3 class="title">Work 05</h3>
+                            <p class="description">Lorem ipsum Enim do velit exercitation fugiat cillum labore et dolore ad minim dolor amet tempor nisi sunt Excepteur voluptate laborum et Duis labore cupidatat </p>
+                            <span class="read-more"><a href="#">Read more</a></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact clear">
+            <div class="contact_in">
+                <div class="map">  <!--구글지도 삽입-->
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12649.486891636398!2d126.97728203065661!3d37.56986363440552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2e89cac4d11%3A0x2507e26ba02b1bd9!2z7ISc7Jq47Yq567OE7IucIOyiheuhnOq1rCDsooXroZwgNzg!5e0!3m2!1sko!2skr!4v1524896301786" width="500px" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="contact-form">
+                    <h3>Contact</h3>
+                    <form>
+                        <p class="form-item">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name">
+                        </p>
+                        <p class="form-item">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                        </p>
+                        <p class="form-item">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message"></textarea>
+                        </p>
+                        <p class="form-item">
+                            <input type="submit" name="submit" id="submit" value="Submit">
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="top_btn">
+           <a href="#"><img src="image/top.png" alt="TOP"></a>
+        </div>
+        <div class="footer_in clear">
+            <aside class="social-links">
+                <ul>
+                    <li class="item-facebook">
+                        <a href="http://www.facebook.com/SHIFTBRAIN" target="_blank">
+                            <span class="indent">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="item-twitter">
+                        <a href="https://twitter.com/shiftbrain" target="_blank">
+                            <span class="indent">Twitter</span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+            <address class="copyright">Copyright &copy; Shiftbrain</address>
+        </div>
+    </footer>
+</div>
+
+
+<!-- Script Source -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery-migrate-1.4.1.min.js"></script>
+<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript" src="js/superslide.2.1.js"></script>
+<script src="js/index.js"></script>
+
+<!-- 슬라이드 플러그인 스크립트 삽입 -->
+<script type="text/javascript">
+jQuery(".slider .bd li").first().before( jQuery(".slider .bd li").last() );
+jQuery(".slider").hover(function(){
+	 jQuery(this).find(".arrow").stop(true,true).fadeIn(300)
+	 },function(){
+	 	jQuery(this).find(".arrow").fadeOut(300) });
+	 jQuery(".slider").slide(
+	 	{ titCell:".hd ul", mainCell:".bd ul", effect:"leftLoop",autoPlay:true, vis:3,autoPage:true, trigger:"click"}
+	);
+</script>
+
+
+</body>
+</html>
